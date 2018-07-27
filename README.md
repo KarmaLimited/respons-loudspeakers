@@ -29,7 +29,7 @@ $ gatsby new [SITE_DIRECTORY_NAME] https://github.com/AustinGreen/gatsby-starter
 $ cd [SITE_DIRECTORY_NAME]
 $ npm run build
 $ npm run serve
-
+```
 
 
 Deps:
