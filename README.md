@@ -37,7 +37,7 @@ Bulma css responsive-framework
 https://bulma.io/
 
 
-<!--
+<!----
 **Note:** Gatsby v2 beta support is here! Check out the [gatsby-v2 branch](https://github.com/AustinGreen/gatsby-starter-netlify-cms/tree/gatsby-v2) to start using it now.
 
 
@@ -92,4 +92,4 @@ npm install --global --production windows-build-tools
 ```
 
 [Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
--->
+---->
