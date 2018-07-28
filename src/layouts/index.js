@@ -8,7 +8,7 @@ import './responsLoudspeaker.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="Respons Loudspeakers" />
     <Navbar />
     <div>{children()}</div>
   </div>
