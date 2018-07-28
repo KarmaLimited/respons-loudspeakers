@@ -58,7 +58,7 @@ netlify-dashboard
 https://app.netlify.com/sites/nervous-einstein-d118b6/settings/identity
 
 current site url:
-https://nervous-einstein-d118b6.netlify.com/products
+https://respons-loudspeakers.netlify.com/
 
 DOCS
 --------------------------------------------------------------------------------
