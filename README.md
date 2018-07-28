@@ -4,12 +4,15 @@ live @ https://nervous-einstein-d118b6.netlify.com
 trello-board: https://trello.com/b/Q0Y76esz/respons-loudspeaker
 
 
-setup new pages:
+go thru this: 
+https://www.gatsbyjs.org/tutorial/part-one/
+
+<!-- setup new pages:
 
 edit in config.yml file<br/>https://github.com/cupofdata/cupofdata.com/blob/master/static/admin/config.yml
 src other changes to project <br/>https://github.com/cupofdata/cupofdata.com/tree/master/src
 
-
+-->
 ### Access Locally
 ```
 $ yarn

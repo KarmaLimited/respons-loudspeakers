@@ -19,7 +19,27 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
+  - name: "contact"
+    label: "Contact"
+    folder: "src/pages/contact/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact"}
+      - {label: "Contact", name: "title", widget: "string"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "faq"
+    label: "FAQ"
+    folder: "src/pages/faq/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq"}
+      - {label: "faq", name: "title", widget: "string"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list"}
+    
   - name: "pages"
     label: "Pages"
     files:
