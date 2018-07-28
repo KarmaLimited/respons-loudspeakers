@@ -1,19 +1,17 @@
-# Gatsby + Netlify CMS 
+# Respons loudspeakers site
 
 live @ https://nervous-einstein-d118b6.netlify.com
-
-läsning:
-https://www.gatsbyjs.org/docs/building-with-components/#page-components
-https://kalinchernev.github.io/admin-ui-gatsby-static-site-generator/
-https://www.gatsbyjs.org/docs/
-
 trello-board: https://trello.com/b/Q0Y76esz/respons-loudspeaker
+
+
+setup new pages:
+
+edit in config.yml file<br/>https://github.com/cupofdata/cupofdata.com/blob/master/static/admin/config.yml
+src other changes to project <br/>https://github.com/cupofdata/cupofdata.com/tree/master/src
 
 
 ### Access Locally
 ```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
 $ yarn
 $ npm run develop
 ```
@@ -25,16 +23,92 @@ $ npm run serve
 
 ## Getting Started (Without Netlify)
 ```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/AustinGreen/gatsby-starter-netlify-cms/
-$ cd [SITE_DIRECTORY_NAME]
 $ npm run build
 $ npm run serve
 ```
 
 
-Deps:
-Bulma css responsive-framework 
-https://bulma.io/
+Current dependecies:
+--------------------------------------------------
+    "bulma": "^0.6.0",
+    "gatsby": "^1.9.213",
+    "gatsby-link": "^1.6.37",
+    "gatsby-plugin-netlify": "^1.0.19",
+    "gatsby-plugin-netlify-cms": "^1.0.9",
+    "gatsby-plugin-react-helmet": "^2.0.5",
+    "gatsby-plugin-sass": "^1.0.17",
+    "gatsby-plugin-sharp": "^1.6.34",
+    "gatsby-remark-images": "^1.5.50",
+    "gatsby-source-filesystem": "^1.5.23",
+    "gatsby-transformer-remark": "^1.7.33",
+    "gatsby-transformer-sharp": "^1.6.21",
+    "lodash": "^4.17.5",
+    "lodash-webpack-plugin": "^0.11.4",
+    "netlify-cms": "^1.7.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "uuid": "^3.2.1"
+    "prettier": "^1.7.4"
+--------------------------------------------------
+
+Project info
+
+netlify-dashboard
+https://app.netlify.com/sites/nervous-einstein-d118b6/settings/identity
+
+current site url:
+https://nervous-einstein-d118b6.netlify.com/products
+
+DOCS
+--------------------------------------------------------------------------------
+gatsby + netlify-docs
+https://www.gatsbyjs.org/docs/netlify-cms/
+
+--------------------------------------------------------------------------------
+---Netlify----------------------------------------------------------------------
+
+netlify docs:
+https://www.netlifycms.org/docs/
+
+features:
+https://www.netlify.com/features/
+
+tutorials:
+https://www.netlify.com/tags/tutorial/
+
+forms:
+https://www.netlify.com/docs/form-handling/
+--------------------------------------------------------------------------------
+---Gatsby-----------------------------------------------------------------------
+
+step by step gatsby -setup
+https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/
+
+intro to gatsby:
+https://www.gatsbyjs.org/tutorial/part-one/
+
+crash course gatsby:
+https://www.youtube.com/watch?v=6YhqQ2ZW1sc
+
+building components with gatsby:
+https://www.gatsbyjs.org/docs/building-with-components/
+
+
+--------------------------------------------------------------------------------
+----Tools and features----------------------------------------------------------
+
+url shortener:
+https://www.netlify.com/blog/2018/03/19/create-your-own-url-shortener-with-netlifys-forms-and-functions/
+
+deploy:
+https://www.netlify.com/docs/continuous-deployment/
+
+Comments and stuff:
+https://jamstack-comments.netlify.com/
+
+react-static intro to styled components:
+https://www.youtube.com/watch?v=KvlTVZPlmgs
 
 
 <!----
