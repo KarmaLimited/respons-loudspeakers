@@ -7,6 +7,8 @@ trello-board: https://trello.com/b/Q0Y76esz/respons-loudspeaker
 go thru this: 
 https://www.gatsbyjs.org/tutorial/part-one/
 
+then:
+https://www.gatsbyjs.org/blog/2018-07-07-the-gatsby-plugin-page-creator/
 <!-- setup new pages:
 
 edit in config.yml file<br/>https://github.com/cupofdata/cupofdata.com/blob/master/static/admin/config.yml
