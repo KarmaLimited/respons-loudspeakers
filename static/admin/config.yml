@@ -26,6 +26,7 @@ collections:
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
+        create: true
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
@@ -33,6 +34,9 @@ collections:
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
+        folder: "src/pages/products"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: Title, name: title, widget: string}

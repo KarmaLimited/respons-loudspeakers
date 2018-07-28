@@ -60,6 +60,9 @@ https://app.netlify.com/sites/nervous-einstein-d118b6/settings/identity
 current site url:
 https://respons-loudspeakers.netlify.com/
 
+JAMstack Best Practices [Js, Api, Markup]
+https://jamstack.org/best-practices/
+
 DOCS
 --------------------------------------------------------------------------------
 gatsby + netlify-docs
