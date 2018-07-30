@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactModal from 'react-modal';
-import IconExtLink from '../../components/IconExtLink';
+import IconExtLink from '../IconExtLink';
 import closeSvg from '../../icons/close.svg';
 
 const propTypes = {
@@ -244,6 +244,7 @@ const Udemy = props => {
             <a
               href={course.url}
               target="_blank"
+              rel="noopener noreferrer"
               css={styles.courseName}
               key={course.name}
             >

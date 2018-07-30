@@ -25,9 +25,9 @@ function SEO({ postNode, metaData }) {
     image: config.siteUrl + config.siteLogo,
   };
 
-  // override _metadata if node is blogpost
+  // override _metadata if node is newspost
   if (postNode) {
-    _metaData.title = `${postNode.frontmatter.title} / Yuuniworks Blog`;
+    _metaData.title = `${postNode.frontmatter.title}`;
     _metaData.description = postNode.excerpt;
     _metaData.keywords = config.siteKeywords;
     _metaData.image = config.siteUrl + postNode.frontmatter.thumbnail;
@@ -52,9 +52,9 @@ function SEO({ postNode, metaData }) {
     address: {
       postalCode: '697-0123',
       addressCountry: 'JP',
-      addressRegion: '島根県',
-      addressLocality: '浜田市',
-      streetAddress: '金城町七条',
+      addressRegion: '',
+      addressLocality: '',
+      streetAddress: '',
     },
     contactPoint: [
       {
@@ -70,7 +70,7 @@ function SEO({ postNode, metaData }) {
     },
     foundingDate: '2018-4-11',
     description: config.siteDescription,
-    sameAs: ['https://www.facebook.com/yuuniworks/'],
+    sameAs: ['https://www.facebook.com/responsloudspeaker/'],
   });
 
   // JSON-LD Breadcrumb
@@ -91,8 +91,8 @@ function SEO({ postNode, metaData }) {
       '@type': 'ListItem',
       position: 2,
       item: {
-        '@id': `${config.siteUrl}/blog/`,
-        name: 'Blog',
+        '@id': `${config.siteUrl}/news/`,
+        name: 'news',
       },
     });
   }
@@ -103,14 +103,14 @@ function SEO({ postNode, metaData }) {
     itemListElement: breadcrumbItemList,
   });
 
-  // JSON-LD BlogPosting
+  // JSON-LD newsPosting
   if (postNode) {
     schemaOrgJSONLD.push({
       '@context': 'http://schema.org',
-      '@type': 'BlogPosting',
+      '@type': 'newsPosting',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `${config.siteUrl}/blog${postNode.fields.slug}`,
+        '@id': `${config.siteUrl}/news${postNode.fields.slug}`,
       },
       headline: postNode.frontmatter.title,
       image: [`${config.siteUrl}${postNode.frontmatter.thumbnail}`],

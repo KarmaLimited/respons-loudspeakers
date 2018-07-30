@@ -31,26 +31,26 @@ const ProfileSection = () => {
       marginTop: rhythm(2),
       marginBottom: rhythm(1.5),
     },
-    gaiyouPictureContainer: {
+    summaryPictureContainer: {
       marginBottom: rhythm(1.5),
       textAlign: 'center',
     },
-    gaiyouPicture: {
+    summaryPicture: {
       width: '150px',
       borderRadius: '50%',
     },
-    gaiyouListItem: {
+    summaryListItem: {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
       marginBottom: rhythm(1),
     },
-    gaiyouItemName: {
+    summaryItemName: {
       flex: 2,
       textAlign: 'right',
       marginRight: '1rem',
     },
-    gaiyouItemContent: {
+    summaryItemContent: {
       flex: 3,
     },
     keirekiGray: {
@@ -60,47 +60,47 @@ const ProfileSection = () => {
 
   return (
     <SectionContainer id="profile" colorNumber="2" skew skewReverse>
-      <SectionHeader text="プロフィール" colorNumber="2" />
+      <SectionHeader text="profile" colorNumber="2" />
 
       <div css={styles.container}>
         <WhiteBox css={styles.whiteBox}>
-          <h3 css={styles.h3}>概要</h3>
-          <div css={styles.gaiyouPictureContainer}>
+          <h3 css={styles.h3}>About</h3>
+          <div css={styles.summaryPictureContainer}>
             <img
               src={profileJpg}
-              css={styles.gaiyouPicture}
-              alt="代表者のプロフィール写真"
+              css={styles.summaryPicture}
+              alt="代表者のprofile写真"
             />
           </div>
 
-          <div css={styles.gaiyouListItem}>
-            <div css={styles.gaiyouItemName}>
+          <div css={styles.summaryListItem}>
+            <div css={styles.summaryItemName}>
               <b>氏名</b>
             </div>
-            <div css={styles.gaiyouItemContent}>田村 翔太</div>
+            <div css={styles.summaryItemContent}>田村 翔太</div>
           </div>
 
-          <div css={styles.gaiyouListItem}>
-            <div css={styles.gaiyouItemName}>
+          <div css={styles.summaryListItem}>
+            <div css={styles.summaryItemName}>
               <b>年齢</b>
             </div>
-            <div css={styles.gaiyouItemContent}>
+            <div css={styles.summaryItemContent}>
               <AgeCalculator birthday="1985-03-15T15:00+09:00" />
             </div>
           </div>
 
-          <div css={styles.gaiyouListItem}>
-            <div css={styles.gaiyouItemName}>
+          <div css={styles.summaryListItem}>
+            <div css={styles.summaryItemName}>
               <b>居住地</b>
             </div>
-            <div css={styles.gaiyouItemContent}>島根県浜田市</div>
+            <div css={styles.summaryItemContent}>島根県浜田市</div>
           </div>
 
-          <div css={styles.gaiyouListItem}>
-            <div css={styles.gaiyouItemName}>
+          <div css={styles.summaryListItem}>
+            <div css={styles.summaryItemName}>
               <b>趣味</b>
             </div>
-            <div css={styles.gaiyouItemContent}>
+            <div css={styles.summaryItemContent}>
               <a
                 href="https://www.youtube.com/channel/UCbcCsHMZEjfsQZ5aaxNYNiw"
                 css={{ color: '#262626' }}
@@ -114,11 +114,11 @@ const ProfileSection = () => {
             </div>
           </div>
 
-          <div css={styles.gaiyouListItem}>
-            <div css={styles.gaiyouItemName}>
+          <div css={styles.summaryListItem}>
+            <div css={styles.summaryItemName}>
               <b>座右の銘</b>
             </div>
-            <div css={styles.gaiyouItemContent}>全てがコードになる</div>
+            <div css={styles.summaryItemContent}>全てがコードになる</div>
           </div>
         </WhiteBox>
 
@@ -194,7 +194,7 @@ const ProfileSection = () => {
             <br />例）ゆうに食べちゃんさいね<br />解）ゆっくり召し上がってくださいね
           </p>
           <p>
-            Yuuniworksという商号には、「問題をさらっと鮮やかに解決して、のんびりとした人生を送る」という意味を込めています。
+            responsloudspeakerという商号には、「問題をさらっと鮮やかに解決して、のんびりとした人生を送る」という意味を込めています。
           </p>
         </WhiteBox>
       </div>

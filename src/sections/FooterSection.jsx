@@ -14,32 +14,32 @@ const FooterSection = props => {
   const footerInfo = [
     {
       imgPath: svgForm,
-      description: 'フォームでのお問い合わせ',
+      description: 'contact',
       onClick: () => props.setCurrentModal('CONTACT'),
     },
     {
       imgPath: svgMail,
-      description: 'info@yuuniworks.com',
-      link: 'mailto:info@yuuniworks.com',
+      description: 'email@email.com',
+      link: 'mailto:email@email.com',
     },
     {
       imgPath: svgFacebook,
-      description: 'facebook.com/yuuniworks',
-      link: 'https://www.facebook.com/yuuniworks/',
+      description: 'facebook.com/respons',
+      link: 'https://www.facebook.com/repons/',
     },
     {
       imgPath: svgGithub,
-      description: 'github.com/junkboy0315',
-      link: 'https://github.com/junkboy0315/',
+      description: 'github.com/2lach',
+      link: 'https://github.com/2lach/',
     },
     {
       imgPath: svgPhone,
-      description: '070 4398 9424',
-      link: 'tel:07043989424',
+      description: '070 123 123',
+      link: 'tel:070123123123',
     },
     {
       imgPath: svgPin,
-      description: '島根県浜田市金城町七条',
+      description: 'map',
       link: 'https://goo.gl/maps/V5G3DJSYy8u',
     },
   ];
@@ -77,7 +77,7 @@ const FooterSection = props => {
 
   return (
     <SectionContainer id="contact" colorNumber="2" skew skewFillBottom>
-      <SectionHeader text="お問い合わせ・ご連絡先" colorNumber="2" />
+      <SectionHeader text="contact-info" colorNumber="2" />
 
       <div css={styles.container}>
         {footerInfo.map(info => (
@@ -86,6 +86,7 @@ const FooterSection = props => {
             onClick={info.onClick || null}
             css={styles.link}
             target="_blank"
+            rel="noopener noreferrer"
             key={info.description}
           >
             <div css={styles.ItemContainer}>

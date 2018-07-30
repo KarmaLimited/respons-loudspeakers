@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as LinkForScroll } from 'react-scroll';
 import IconExtLink from '../components/IconExtLink';
 import arrowSvg from '../icons/arrow.svg';
-import logoSvg from '../icons/logo.svg';
+import logoSvg from '../icons/logo.png';
 import topImageJpg from '../images/top-image.jpg';
 
 const TopSection = () => {
@@ -38,7 +38,7 @@ const TopSection = () => {
   return (
     <section id="top" css={styles.container}>
       <h1 css={styles.logo}>
-        <img src={logoSvg} alt="Yuuniworksのロゴ" />
+        <img src={logoSvg} alt="responsloudspeaker" />
       </h1>
       <div css={styles.description}>
         <a
@@ -47,19 +47,19 @@ const TopSection = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          島根県浜田市<IconExtLink color="#fff" />
-        </a>を拠点に<br />
-        フロントエンド開発のお手伝いをしている<br />
-        フリーランスエンジニアです。
+          <IconExtLink color="#fff" />
+        </a>
+        <br />
+        <br />
       </div>
       <LinkForScroll
-        to="gaiyou"
+        to="summary"
         smooth
         duration={150}
         offset={-50}
         css={styles.arrow}
       >
-        <img src={arrowSvg} alt="下向きの矢印" />
+        <img src={arrowSvg} alt="alt" />
       </LinkForScroll>
     </section>
   );

@@ -4,7 +4,7 @@ import React from 'react';
 import onClickOutside from 'react-onclickoutside';
 import { Link as LinkForScroll } from 'react-scroll';
 import humbergerSvg from '../../icons/humberger.svg';
-import logoSvg from '../../icons/logo.svg';
+import logoSvg from '../../icons/logo.png';
 
 const propTypes = {
   location: PropTypes.shape({ pathname: PropTypes.string.isRequired })
@@ -36,14 +36,14 @@ class Header extends React.Component {
     window.removeEventListener('keydown', this.onKeydown);
   }
 
-  // ハンバーガーメニューをクリックするとメニューを開閉する
+  // open menu
   onHumbergerClick() {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen,
     });
   }
 
-  // ESCキーでメニューを閉じる
+  // ESC press leave menu
   onKeydown(e) {
     if (e.keyCode === 27) {
       this.setState({
@@ -52,7 +52,7 @@ class Header extends React.Component {
     }
   }
 
-  // スクロール位置がトップになっているか判断する
+  // nav background changer
   onScroll() {
     const JUDGE_POSITION_Y = 50;
 
@@ -81,7 +81,6 @@ class Header extends React.Component {
     });
   }
 
-  // メニューの外側をクリックするとメニューを閉じる（react-onclickoutsideで制御）
   handleClickOutside() {
     if (this.state.isMenuOpen) {
       this.setState({
@@ -188,23 +187,24 @@ class Header extends React.Component {
     };
 
     const menuItem = [
-      { name: '概要', id: 'gaiyou', path: '/#gaiyou' },
-      { name: 'スキル', id: 'skill', path: '/#skill' },
-      { name: '実績', id: 'performance', path: '/#performance' },
-      { name: 'プロフィール', id: 'profile', path: '/#profile' },
-      { name: '問い合わせ', id: 'contact', path: '/#contact' },
-      { name: 'ブログ', id: 'blog', path: '/blog/' },
+      { name: 'About', id: 'summary', path: '/#summary' },
+      { name: 'Music', id: 'skill', path: '/#skill' },
+      { name: 'Philosophy', id: 'performance', path: '/#performance' },
+      { name: 'History', id: 'profile', path: '/#profile' },
+      { name: 'Contact', id: 'contact', path: '/#contact' },
+      { name: 'News', id: 'news', path: '/news/' },
+      { name: 'Respons Speakers', id: 'news', path: '/news/' },
     ];
 
     return (
       <nav css={styles.navbar}>
         {isRootPath ? (
           <LinkForScroll to="top" smooth duration={150} css={styles.logo}>
-            <img src={logoSvg} alt="Yuuniworksのロゴ" />
+            <img src={logoSvg} alt="logo" />
           </LinkForScroll>
         ) : (
           <Link to="/" css={styles.logo}>
-            <img src={logoSvg} alt="Yuuniworksのロゴ" />
+            <img src={logoSvg} alt="logo" />
           </Link>
         )}
 
@@ -214,7 +214,7 @@ class Header extends React.Component {
               return (
                 <LinkForScroll
                   to={item.id}
-                  spy // avtiveクラスを自動で設定するために必須の設定
+                  spy // active
                   smooth
                   duration={150}
                   offset={-50}
@@ -256,7 +256,7 @@ class Header extends React.Component {
           role="button"
           tabIndex={0}
         >
-          <img src={humbergerSvg} alt="humberger menu button" />
+          <img src={humbergerSvg} alt="menu button" />
         </div>
       </nav>
     );

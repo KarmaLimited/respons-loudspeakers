@@ -3,7 +3,7 @@ import React from 'react';
 import SectionContainer from '../components/SectionContainer';
 import SectionHeader from '../components/SectionHeader';
 
-const BlogSection = () => {
+const newsSection = () => {
   const styles = {
     link: {
       background: '#fff',
@@ -29,13 +29,13 @@ const BlogSection = () => {
   };
 
   return (
-    <SectionContainer id="blog">
-      <SectionHeader text="ブログ" colorNumber="1" />
-      <Link to="/blog/" css={styles.link}>
-        Yuuniworks Blog
+    <SectionContainer id="news">
+      <SectionHeader text="news" colorNumber="1" />
+      <Link to="/news/" css={styles.link}>
+        Respons loudspeaker news
       </Link>
     </SectionContainer>
   );
 };
 
-export default BlogSection;
+export default newsSection;

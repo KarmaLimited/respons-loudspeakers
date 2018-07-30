@@ -40,7 +40,7 @@ class RipIe extends React.Component {
         color: '#721C24',
         margin: '2rem',
         maxWidth: '400px',
-        opacity: this.state.isVisible ? 1 : 0, // for amimation
+        opacity: this.state.isVisible ? 1 : 0, // for animation
         padding: '2rem',
         position: 'fixed',
         right: 0,

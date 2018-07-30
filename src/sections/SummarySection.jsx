@@ -6,7 +6,7 @@ import SectionHeader from '../components/SectionHeader';
 import WhiteBox from '../components/WhiteBox';
 import { rhythm } from '../utils/typography';
 
-const GaiyouSection = props => {
+const summarySection = props => {
   const articles = [
     [
       '何ができる？',
@@ -24,7 +24,7 @@ const GaiyouSection = props => {
       'いくらかかる？',
       'ご相談ください。期間や内容に応じたお見書を作成いたします。',
     ],
-    ['いま仕事できる？', 'お仕事可能ですのでお気軽にお問い合わせください。'],
+    ['いま仕事できる？', 'お仕事可能ですのでお気軽におcontactください。'],
   ];
 
   const styles = {
@@ -67,8 +67,8 @@ const GaiyouSection = props => {
   };
 
   return (
-    <SectionContainer id="gaiyou">
-      <SectionHeader text="概要" colorNumber="1" />
+    <SectionContainer id="summary">
+      <SectionHeader text="About" colorNumber="1" />
 
       <WhiteBox css={styles.container}>
         {articles.map(article => (
@@ -86,14 +86,14 @@ const GaiyouSection = props => {
         css={styles.button}
         onClick={() => props.setCurrentModal('CONTACT')}
       >
-        お問い合わせ
+        おcontact
       </button>
     </SectionContainer>
   );
 };
 
-GaiyouSection.propTypes = {
+summarySection.propTypes = {
   setCurrentModal: PropTypes.func.isRequired,
 };
 
-export default GaiyouSection;
+export default summarySection;

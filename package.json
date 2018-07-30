@@ -1,6 +1,6 @@
 {
-  "name": "yuuni-web",
-  "description": "a web site of yuuniworks",
+  "name": "respons-loudspeakers",
+  "description": "Respons loudspeakers site",
   "version": "1.0.0",
   "author": "2lach",
   "dependencies": {

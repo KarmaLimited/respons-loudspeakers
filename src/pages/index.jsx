@@ -2,9 +2,9 @@ import React from 'react';
 import ModalConductor from '../components/ModalConductor';
 import SEO from '../components/SEO';
 import '../css/global.css';
-import BlogSection from '../sections/BlogSection';
+import NewsSection from '../sections/NewsSection';
 import FooterSection from '../sections/FooterSection';
-import GaiyouSection from '../sections/GaiyouSection';
+import SummarySection from '../sections/SummarySection';
 import PerformanceSection from '../sections/PerformanceSection';
 import ProfileSection from '../sections/ProfileSection';
 import SkillSection from '../sections/SkillSection';
@@ -38,11 +38,11 @@ class IndexPage extends React.Component {
         )}
 
         <TopSection />
-        <GaiyouSection setCurrentModal={this.setCurrentModal} />
+        <SummarySection setCurrentModal={this.setCurrentModal} />
         <SkillSection setCurrentModal={this.setCurrentModal} />
         <PerformanceSection />
         <ProfileSection />
-        <BlogSection />
+        <NewsSection />
         <FooterSection setCurrentModal={this.setCurrentModal} />
 
         <SEO />

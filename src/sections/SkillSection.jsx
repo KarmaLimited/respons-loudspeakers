@@ -23,8 +23,7 @@ const SkillSection = props => {
       padding: rhythm(1.5),
     },
     containerKihon: {
-      position:
-        'relative' /* 親要素をrelativeにしないと子(?マーク)がはみ出すため */,
+      position: 'relative',
     },
     helpButton: {
       color: '#999999',
@@ -86,7 +85,7 @@ const SkillSection = props => {
     },
     その他: [
       {
-        title: 'スキルテスト',
+        title: 'skillテスト',
         content: (
           <div>
             Paizaコーディング{' '}
@@ -102,7 +101,7 @@ const SkillSection = props => {
         ),
       },
       {
-        title: 'スキル習得方法',
+        title: 'skill習得方法',
         content: (
           <div
             onClick={() => props.setCurrentModal('UDEMY')}
@@ -133,7 +132,7 @@ const SkillSection = props => {
 
   return (
     <SectionContainer id="skill" colorNumber="2" skew>
-      <SectionHeader text="スキル" colorNumber="2" />
+      <SectionHeader text="skill" colorNumber="2" />
       <div css={styles.grid}>
         <WhiteBox css={styles.whiteBox}>
           <div css={styles.containerKihon}>

@@ -20,7 +20,7 @@ const propTypes = {
   }).isRequired,
 };
 
-export default function BlogPost(props) {
+export default function newsPost(props) {
   const styles = {
     container: {
       maxWidth: '800px',
@@ -173,17 +173,21 @@ export default function BlogPost(props) {
   const post = props.data.markdownRemark;
 
   const disqusConfig = {
-    url: `http://www.yuuniworks.com/blog${post.fields.slug}`,
-    identifier: `http://www.yuuniworks.com/blog${post.fields.slug}`,
+    url: `http://www.responsloudspeaker.com/news${post.fields.slug}`,
+    identifier: `http://www.responsloudspeaker.com/news${post.fields.slug}`,
     title: post.frontmatter.title,
   };
 
   return (
     <SectionContainer colorNumber="1" isTop>
-      <SectionHeader colorNumber="1" text="Yuuniworks Blog" link="/blog/" />
+      <SectionHeader
+        colorNumber="1"
+        text="responsloudspeaker news"
+        link="/news/"
+      />
 
       <div css={styles.container}>
-        <Link to="/blog/" css={styles.backButton}>
+        <Link to="/news/" css={styles.backButton}>
           <FontAwesomeIcon icon="arrow-left" style={styles.backButton.arrow} />{' '}
           記事一覧に戻る
         </Link>
@@ -200,7 +204,10 @@ export default function BlogPost(props) {
 
         <WhiteBox>
           <aside css={styles.comments}>
-            <DiscussionEmbed shortname="yuuniworks" config={disqusConfig} />
+            <DiscussionEmbed
+              shortname="responsloudspeaker"
+              config={disqusConfig}
+            />
           </aside>
         </WhiteBox>
 
@@ -210,7 +217,7 @@ export default function BlogPost(props) {
             <div>
               <p>田村 翔太</p>
               <p>
-                <Link to="/">Yuuniworks</Link>{' '}
+                <Link to="/">responsloudspeaker</Link>{' '}
                 代表。島根県浜田市を拠点に主にフロントエンド開発のお手伝いをしているフリーランスエンジニアです。React/Reduxを用いたSingle
                 Page Applicationや、NodeJSを使ったAPI開発を得意としています。
               </p>
@@ -218,7 +225,7 @@ export default function BlogPost(props) {
           </footer>
         </WhiteBox>
 
-        <Link to="/blog/" css={styles.backButton}>
+        <Link to="/news/" css={styles.backButton}>
           <FontAwesomeIcon icon="arrow-left" style={styles.backButton.arrow} />{' '}
           記事一覧に戻る
         </Link>
@@ -245,10 +252,10 @@ export default function BlogPost(props) {
   );
 }
 
-BlogPost.propTypes = propTypes;
+newsPost.propTypes = propTypes;
 
 export const query = graphql`
-  query BlogPostQuery($slug: String!) {
+  query newsPostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt
       html

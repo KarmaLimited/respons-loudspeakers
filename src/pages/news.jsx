@@ -15,7 +15,7 @@ const propTypes = {
   }).isRequired,
 };
 
-const BlogPage = ({ data }) => {
+const newsPage = ({ data }) => {
   const styles = {
     container: {
       maxWidth: '600px',
@@ -64,14 +64,14 @@ const BlogPage = ({ data }) => {
 
   return (
     <SectionContainer colorNumber="1" isTop>
-      <SectionHeader colorNumber="1" text="Yuuniworks Blog" />
+      <SectionHeader colorNumber="1" text="responsloudspeaker news" />
       <div css={styles.container}>
         <a href={rssPath} css={styles.rssLink}>
           <img src={rssSvg} alt="rss" />
         </a>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Link
-            to={`/blog${node.fields.slug}`}
+            to={`/news${node.fields.slug}`}
             css={styles.link}
             key={node.frontmatter.title}
           >
@@ -79,7 +79,6 @@ const BlogPage = ({ data }) => {
               <article css={styles.boxInner}>
                 <div
                   css={{
-                    // アスペクト比率を維持、かつ、画像で範囲全体をカバー、かつ、最も小さく表示
                     background: `url("${
                       node.frontmatter.thumbnail
                     }") no-repeat center center`,
@@ -110,9 +109,8 @@ const BlogPage = ({ data }) => {
 
       <SEO
         metaData={{
-          title: 'Yuuniworks Blog',
-          description:
-            '島根のフリーランスエンジニア「Yuuniworks」のブログです。フロントエンド界隈の技術的なネタを記録しています。',
+          title: 'Respons loudspeaker news',
+          description: 'rl news',
         }}
       />
 
@@ -122,7 +120,7 @@ const BlogPage = ({ data }) => {
             rel: 'alternate',
             type: 'application/atom+xml',
             href: rssPath,
-            title: 'RSS for Yuuniworks Blog',
+            title: 'RSS for Respons loudspeaker',
           },
         ]}
       />
@@ -130,12 +128,12 @@ const BlogPage = ({ data }) => {
   );
 };
 
-BlogPage.propTypes = propTypes;
+newsPage.propTypes = propTypes;
 
-export default BlogPage;
+export default newsPage;
 
 export const query = graphql`
-  query BlogPageQuery {
+  query newsPageQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {

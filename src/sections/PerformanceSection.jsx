@@ -13,7 +13,7 @@ import { rhythm } from '../utils/typography';
 const PerformanceSection = () => {
   const performances = [
     {
-      name: 'Yuuniworks(このサイト)',
+      name: 'responsloudspeaker(このサイト)',
       description:
         'Single Page Applicationとして作成した、事業広報用Webページです。',
       techStack: [
@@ -21,17 +21,17 @@ const PerformanceSection = () => {
         { name: 'Gatsby', description: 'Static Site Generator' },
         {
           name: 'AWS API Gateway',
-          description: '問い合わせフォーム用バックエンド',
+          description: 'contactフォーム用バックエンド',
         },
-        { name: 'AWS Lambda', description: '問い合わせフォーム用バックエンド' },
-        { name: 'AWS SES', description: '問い合わせフォーム用バックエンド' },
+        { name: 'AWS Lambda', description: 'contactフォーム用バックエンド' },
+        { name: 'AWS SES', description: 'contactフォーム用バックエンド' },
         { name: 'Netlify', description: 'ホスティング、CI/CD' },
         { name: 'Netlify CMS', description: 'CMS' },
         { name: 'Sentry', description: 'クライアントサイドのエラー収集' },
       ],
-      webpageURL: 'http://www.yuuniworks.com',
+      webpageURL: 'http://www.responsloudspeaker.com',
       githubURL: 'https://github.com/junkboy0315/yuuni-web',
-      blogPath: '/blog/2018-04-09-JAMStackなWebサイトの作成/',
+      newsPath: '/news/2018-04-09-JAMStackなWebサイトの作成/',
       imgPath: jissekiYuuniJpg,
     },
     {
@@ -46,7 +46,7 @@ const PerformanceSection = () => {
         { name: 'Semaphore', description: 'CI/CD' },
         { name: 'Service Worker', description: 'オフライン対応' },
       ],
-      webpageURL: 'http://split.yuuniworks.com',
+      webpageURL: 'http://split.responsloudspeaker.com',
       githubURL: 'https://github.com/junkboy0315/splitbills',
       imgPath: jissekiWarikanPng,
     },
@@ -117,13 +117,17 @@ const PerformanceSection = () => {
 
   return (
     <SectionContainer id="performance">
-      <SectionHeader text="実績" colorNumber="1" />
+      <SectionHeader text="performance" colorNumber="1" />
 
       {/* グリッド始点 */}
       <div css={styles.grid}>
         {performances.map(performance => (
           <WhiteBox key={performance.name} css={styles.whiteBox}>
-            <a href={performance.webpageURL} target="_blank">
+            <a
+              href={performance.webpageURL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={performance.imgPath}
                 css={styles.itemImage}
@@ -134,6 +138,7 @@ const PerformanceSection = () => {
             <a
               href={performance.webpageURL}
               target="_blank"
+              rel="noopener noreferrer"
               css={styles.itemTitle}
             >
               {performance.name}
@@ -146,6 +151,7 @@ const PerformanceSection = () => {
               <a
                 href={performance.githubURL}
                 target="_blank"
+                rel="noopener noreferrer"
                 css={styles.externalLink}
               >
                 ソースコード
@@ -154,13 +160,13 @@ const PerformanceSection = () => {
               <div style={{ color: 'transparent' }}>_</div>
             )}
 
-            {performance.blogPath && (
+            {performance.newsPath && (
               <Link
-                to={performance.blogPath}
+                to={performance.newsPath}
                 target="_blank"
                 css={styles.externalLink}
               >
-                関連ブログ
+                関連news
               </Link>
             )}
 

@@ -45,8 +45,6 @@ class Contact extends React.Component {
   }
 
   componentWillUnmount() {
-    // この処理を行わないと、コンポーネントを2回目以降にマウントした際、コンソールにエラーが出る。
-    // これは、すでにアンマウントされた初回コンポーネントの'this.setState'を再利用してしまうため。
     axios.interceptors.request.eject(this.requestInterceptor);
   }
 
@@ -204,7 +202,7 @@ class Contact extends React.Component {
           </div>
         ) : (
           <div>
-            <h2>お問い合わせ</h2>
+            <h2>Contact</h2>
             <div css={styles.nameMailContainer}>
               <label css={styles.nameMailItem} htmlFor="name">
                 お名前：
@@ -229,7 +227,7 @@ class Contact extends React.Component {
             </div>
 
             <label htmlFor="message">
-              お問い合わせ内容：
+              おcontact内容：
               <textarea
                 name="message"
                 onChange={this.handleInputChange}

@@ -5,7 +5,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
 
   if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: '_posts/blog' });
+    const slug = createFilePath({ node, getNode, basePath: '_posts/news' });
 
     createNodeField({
       node,
@@ -38,12 +38,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       .then(result => {
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           createPage({
-            path: `/blog${node.fields.slug}`,
-            component: path.resolve('./src/templates/blog-post.jsx'),
+            path: `/news${node.fields.slug}`,
+            component: path.resolve('./src/templates/news-post.jsx'),
             context: {
               // Data passed to context is available in page queries as GraphQL variables.
               slug: node.fields.slug,
-              modifiedDate: node.frontmatter.dateModified, // rss用 詳細はgatsby-config.jsを参照
+              modifiedDate: node.frontmatter.dateModified, // rssflow
             },
           });
         });

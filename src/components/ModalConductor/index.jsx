@@ -15,7 +15,6 @@ const defaultProps = {
 
 class ModalConductor extends React.Component {
   componentDidMount() {
-    // - モーダルの背景画面のスクロールを防止する。
     document.documentElement.style.overflowY = 'hidden';
   }
 

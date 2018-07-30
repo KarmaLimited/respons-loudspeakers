@@ -19,10 +19,10 @@ module.exports = {
               allMarkdownRemark.edges.map(edge =>
                 Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.summary,
-                  url: `${site.siteMetadata.siteUrl}/blog${
+                  url: `${site.siteMetadata.siteUrl}/news${
                     edge.node.fields.slug
                   }`,
-                  guid: `${site.siteMetadata.siteUrl}/blog${
+                  guid: `${site.siteMetadata.siteUrl}/news${
                     edge.node.fields.slug
                   }`,
                   enclosure: {
@@ -114,7 +114,7 @@ module.exports = {
             url: site.siteMetadata.siteUrl + edge.node.path,
             changefreq: 'daily',
             priority: 0.7,
-            lastmodISO: edge.node.context.modifiedDate, 
+            lastmodISO: edge.node.context.modifiedDate,
           })),
       },
     },
@@ -127,16 +127,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'blog',
-        path: `${__dirname}/_posts/blog/`,
+        name: 'news',
+        path: `${__dirname}/_posts/news/`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        // /static/admin/config.ymlに関連設定あり
-        path: `${__dirname}/static/blogImages/`,
-        name: 'blogImagesFolder',
+        path: `${__dirname}/static/newsImages/`,
+        name: 'newsImagesFolder',
       },
     },
     {
@@ -147,7 +146,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
-              name: 'blogImagesFolder',
+              name: 'newsImagesFolder',
             },
           },
           {
