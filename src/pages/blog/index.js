@@ -1,13 +1,13 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import Helmet from 'react-helmet'
 import PostCard from '../../components/PostCard'
 
 export default class BlogPage extends Component {
-  render () {
-    const {data} = this.props
-    const {edges: posts} = data.allMarkdownRemark
+  render() {
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <div>
@@ -20,9 +20,7 @@ export default class BlogPage extends Component {
               <div className='columns'>
                 <div className='column is-10 is-offset-1'>
                   <div className='section'>
-                    <h1 className='title'>
-                                            Blog
-                    </h1>
+                    <h1 className='title'>Blog</h1>
                   </div>
                 </div>
               </div>
@@ -59,7 +57,7 @@ export const blogPageQuery = graphql`
             title
             cover
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: 'MMMM DD, YYYY')
           }
         }
       }

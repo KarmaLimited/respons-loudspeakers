@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {ArticleTemplate} from '../../templates/article-page'
+import { ArticleTemplate } from '../../templates/article-page'
 
-const ArticlePreview = ({entry, widgetFor}) => (
+const ArticlePreview = ({ entry, widgetFor }) => (
   <ArticleTemplate
     content={widgetFor('body')}
     cover={entry.getIn(['data', 'cover'])}

@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
 import config from '../../../meta/config'
 
 class Disqus extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       toasts: [],
@@ -12,19 +12,19 @@ class Disqus extends Component {
     this.onSnackbarDismiss = this.onSnackbarDismiss.bind(this)
   }
 
-  onSnackbarDismiss () {
+  onSnackbarDismiss() {
     const [, ...toasts] = this.state.toasts
-    this.setState({toasts})
+    this.setState({ toasts })
   }
 
-  notifyAboutComment () {
+  notifyAboutComment() {
     const toasts = this.state.toasts.slice()
-    toasts.push({text: 'New comment available!'})
-    this.setState({toasts})
+    toasts.push({ text: 'New comment available!' })
+    this.setState({ toasts })
   }
 
-  render () {
-    const {title, slug} = this.props
+  render() {
+    const { title, slug } = this.props
     if (!config.disqusShortname) {
       return null
     }

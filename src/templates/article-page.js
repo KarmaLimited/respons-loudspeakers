@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {kebabCase} from 'lodash'
+import { kebabCase } from 'lodash'
 import Link from 'gatsby-link'
-import Content, {HTMLContent} from '../components/Content'
+import Content, { HTMLContent } from '../components/Content'
 import SE0 from '../components/SEO'
 import Disqus from '../components/Disqus/index.js'
 import Share from '../components/Share/index.js'
@@ -37,7 +37,7 @@ export const ArticleTemplate = ({
             <img src={cover} alt={title} />
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{marginTop: `4rem`}}>
+              <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className='taglist'>
                   {tags.map(tag => (
@@ -49,16 +49,9 @@ export const ArticleTemplate = ({
               </div>
             ) : null}
             <hr />
-            <Share
-              title={title}
-              slug={slug}
-              excerpt={meta_desc}
-            />
+            <Share title={title} slug={slug} excerpt={meta_desc} />
             <hr />
-            <Disqus
-              title={title}
-              slug={slug}
-            />
+            <Disqus title={title} slug={slug} />
           </div>
         </div>
       </div>
@@ -76,8 +69,8 @@ ArticleTemplate.propTypes = {
   slug: PropTypes.string,
 }
 
-const ArticlePage = ({data}) => {
-  const {markdownRemark: post} = data
+const ArticlePage = ({ data }) => {
+  const { markdownRemark: post } = data
   return (
     <ArticleTemplate
       content={post.html}
@@ -106,10 +99,10 @@ export const pageQuery = graphql`
       id
       html
       fields {
-            slug
-          }
+        slug
+      }
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: 'MMMM DD, YYYY')
         title
         cover
         meta_title

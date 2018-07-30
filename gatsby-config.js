@@ -1,6 +1,6 @@
-const config = require('./meta/config')
+const config = require('./meta/config');
 
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
 module.exports = {
   siteMetadata: {
@@ -89,16 +89,15 @@ module.exports = {
           },
         ],
       },
-
     },
     {
       resolve: 'gatsby-plugin-feed',
       options: {
-        setup (ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark
-          ret.generator = 'GatsbyJS Business Starter'
-          return ret
+        setup(ref) {
+          const ret = ref.query.site.siteMetadata.rssMetadata;
+          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
+          ret.generator = 'GatsbyJS Business Starter';
+          return ret;
         },
         query: `
                     {
@@ -119,10 +118,12 @@ module.exports = {
                   `,
         feeds: [
           {
-            serialize (ctx) {
-              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata
+            serialize(ctx) {
+              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata;
               return ctx.query.allMarkdownRemark.edges
-                .filter(edge => edge.node.frontmatter.templateKey === 'article-page')
+                .filter(
+                  edge => edge.node.frontmatter.templateKey === 'article-page'
+                )
                 .map(edge => ({
                   categories: edge.node.frontmatter.tags,
                   date: edge.node.frontmatter.date,
@@ -131,8 +132,8 @@ module.exports = {
                   author: rssMetadata.author,
                   url: rssMetadata.site_url + edge.node.fields.slug,
                   guid: rssMetadata.site_url + edge.node.fields.slug,
-                  custom_elements: [{'content:encoded': edge.node.html}],
-                }))
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                }));
             },
             query: `
                             {
@@ -165,5 +166,4 @@ module.exports = {
     },
     'gatsby-plugin-netlify',
   ],
-}
-
+};
