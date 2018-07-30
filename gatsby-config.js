@@ -114,7 +114,7 @@ module.exports = {
             url: site.siteMetadata.siteUrl + edge.node.path,
             changefreq: 'daily',
             priority: 0.7,
-            lastmodISO: edge.node.context.modifiedDate, // デフォルト設定に追加
+            lastmodISO: edge.node.context.modifiedDate, 
           })),
       },
     },
@@ -134,7 +134,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        // ここの設定がいまいちよくわからない
         // /static/admin/config.ymlに関連設定あり
         path: `${__dirname}/static/blogImages/`,
         name: 'blogImagesFolder',
@@ -145,11 +144,6 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-prismjs',
-          // gatsby-remark-imagesは、mdファイル内の画像のリンク先が相対パスの時のみ動作する。
-          // Netlify CMSでアップした画像は、config.yamlのpublic_folderで
-          // 指定した、'/'から始まる絶対パスに変換される。
-          // このままではgatsby-remark-imagesが動作しない。
-          // この問題を解消するため、下記のプラグインを使って画像のsrcを相対パスにあらかじめ変換する。
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
