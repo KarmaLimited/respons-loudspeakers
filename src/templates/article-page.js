@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {kebabCase} from 'lodash'
 import Link from 'gatsby-link'
 import Content, {HTMLContent} from '../components/Content'
-import SE0 from '../components/SEO/index.js'
+import SE0 from '../components/SEO'
 import Disqus from '../components/Disqus/index.js'
 import Share from '../components/Share/index.js'
 

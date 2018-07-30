@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-business",
-  "description": "Gatsby Business Website Starter",
+  "name": "respons-loudspeakers",
+  "description": "Respons Loudspeakers bootstraped with Gatsby Business Website Starter",
   "version": "1.0.0",
-  "author": "Vaibhav Sharma",
+  "author": "2lach",
   "dependencies": {
     "bulma": "^0.6.2",
     "gatsby": "^1.9.241",
