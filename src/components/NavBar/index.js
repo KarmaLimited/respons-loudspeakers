@@ -1,46 +1,22 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 import React from 'react'
 import Link from 'gatsby-link'
 
 const NavBar = () => {
   return (
-    <nav className='navbar is-fixed-top' aria-label='main navigation'>
-      <div className='navbar-brand'>
-        <Link to='/' className='navbar-item'>
-                    Gatsby Starter Business
-        </Link>
-        <button className='button navbar-burger' data-target='navMenu'>
-          <span />
-          <span />
-          <span />
-        </button>
-      </div>
-      <div className='navbar-menu' id='navMenu'>
-        <div className='navbar-start'>
-          <Link className='navbar-item' to='/pricing'>
-                        Pricing
-          </Link>
-          <Link className='navbar-item' to='/about'>
-                        About
-          </Link>
-          <Link className='navbar-item' to='/blog'>
-                        Blog
-          </Link>
-        </div>
-        <div className='navbar-end'>
-          <div className='navbar-item'>
-            <div className='field is-grouped'>
-              <p className='control'>
-                <Link
-                  className='button is-primary is-outlined'
-                  to='/contact'>
-                                    Contact Us
-                </Link>
-              </p>
-            </div>
+    <nav className='navbar is-fixed-bottom is-light navbar-tab-active-color'>
+      <div className='container'>
+        <div className='navbar-brand'>
+          <Link className='navbar-item logoHover' to='/' />
+
+          <div className='navbar-start'>
+            <Link className='navbar-item' to='/products'>Respons Speakers</Link>
+            <Link className='navbar-item' to='/about'>About</Link>
+            <Link className='navbar-item' to='/about'>Philosophy</Link>
+            <Link className='navbar-item' to='/History'>History</Link>
+            <Link className='navbar-item' to='/blog'>News</Link>
+            <Link className='navbar-item' to='/pricing'>Music</Link>
           </div>
+          <div className='navbar-end' />
         </div>
       </div>
     </nav>
@@ -48,3 +24,4 @@ const NavBar = () => {
 }
 
 export default NavBar
+

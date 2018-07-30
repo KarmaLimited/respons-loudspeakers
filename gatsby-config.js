@@ -1,6 +1,3 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 const config = require('./meta/config')
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix

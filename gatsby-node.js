@@ -1,6 +1,3 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')

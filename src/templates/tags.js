@@ -1,6 +1,3 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 import React, {Component} from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'

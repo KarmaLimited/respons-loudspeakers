@@ -1,6 +1,3 @@
-/**
- * Created by vaibhav on 1/4/18
- */
 import React, {Component} from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
 import config from '../../../meta/config'

@@ -1,14 +1,11 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 import React from 'react'
 import PropTypes from 'prop-types'
 import {kebabCase} from 'lodash'
 import Link from 'gatsby-link'
 import Content, {HTMLContent} from '../components/Content'
-import SE0 from '../components/SEO'
-import Disqus from '../components/Disqus'
-import Share from '../components/Share'
+import SE0 from '../components/SEO/index.js'
+import Disqus from '../components/Disqus/index.js'
+import Share from '../components/Share/index.js'
 
 export const ArticleTemplate = ({
   content,
