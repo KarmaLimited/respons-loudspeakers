@@ -1,105 +1,87 @@
+/**
+ * Created by vaibhav on 31/3/18
+ */
 import React from 'react'
+import config from '../../../meta/config'
 import Helmet from 'react-helmet'
-import config from '../../../config/SiteConfig'
 
-const SEO = props => {
-    const { postNode, postPath, postSEO } = props
-    let title
-    let description
-    let image
-    let postURL
-    const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
-    if (postSEO) {
-        const postMeta = postNode.frontmatter
-        title = postMeta.title // eslint-disable-line prefer-destructuring
-        description = postNode.excerpt
-        image = postMeta.cover.childImageSharp.resize.src
-        postURL = config.siteUrl + realPrefix + postPath
-    } else {
-        title = config.siteTitleAlt
-        description = config.siteDescription
-        image = config.siteLogo
-    }
-    image = config.siteUrl + realPrefix + image
-    const blogURL = config.siteUrl + config.pathPrefix
-    const schemaOrgJSONLD = [
+const SE0 = ({title, meta_title, meta_desc, cover, slug}) => {
+  let postURL = config.siteUrl + slug
+  const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+  let image = config.siteUrl + realPrefix + cover
+  const blogURL = config.siteUrl + config.pathPrefix
+  const schemaOrgJSONLD = [
+    {
+      '@context': 'http://schema.org',
+      '@type': 'WebSite',
+      url: blogURL,
+      name: title,
+      alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+    },
+  ]
+
+  schemaOrgJSONLD.push([
+    {
+      '@context': 'http://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
         {
-            '@context': 'http://schema.org',
-            '@type': 'WebSite',
-            url: blogURL,
+          '@type': 'ListItem',
+          position: 1,
+          item: {
+            '@id': postURL,
             name: title,
-            alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+            image,
+          },
         },
-    ]
-    if (postSEO) {
-        schemaOrgJSONLD.push(
-            {
-                '@context': 'http://schema.org',
-                '@type': 'BreadcrumbList',
-                itemListElement: [
-                    {
-                        '@type': 'ListItem',
-                        position: 1,
-                        item: {
-                            '@id': postURL,
-                            name: title,
-                            image,
-                        },
-                    },
-                ],
-            },
-            {
-                '@context': 'http://schema.org',
-                '@type': 'BlogPosting',
-                url: blogURL,
-                name: title,
-                alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
-                headline: title,
-                image: {
-                    '@type': 'ImageObject',
-                    url: image,
-                },
-                description,
-            }
-        )
-    }
-    return (
-        <Helmet>
-            <html lang={config.siteLanguage} />
-            <title>{title}</title>
-            <meta charSet="utf-8" />
-            <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale = 1.0, maximum-scale=1.0"
-            />
-            <meta name="description" content={description} />
-            <meta name="image" content={image} />
-            <script type="application/ld+json">
-                {JSON.stringify(schemaOrgJSONLD)}
-            </script>
-            <meta property="og:locale" content={config.ogLanguage} />
-            <meta property="og:site_name" content={config.ogSiteName} />
-            <meta property="og:url" content={postSEO ? postURL : blogURL} />
-            {postSEO ? <meta property="og:type" content="article" /> : null}
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={image} />
-            <meta
-                property="fb:app_id"
-                content={config.siteFBAppID ? config.siteFBAppID : ''}
-            />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta
-                name="twitter:creator"
-                content={config.userTwitter ? config.userTwitter : ''}
-            />
-            <meta name="twitter:title" content={title} />
-            <meta name="twitter:url" content={config.siteUrl} />
-            <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={image} />
-        </Helmet>
-    )
+      ],
+    },
+    {
+      '@context': 'http://schema.org',
+      '@type': 'BlogPosting',
+      url: blogURL,
+      name: title,
+      alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+      headline: title,
+      image: {
+        '@type': 'ImageObject',
+        url: image,
+      },
+      meta_desc,
+    },
+  ])
+
+  return (
+    <Helmet>
+      <title>{meta_title}</title>
+      {/* General tags */}
+      <meta name='description' content={meta_desc} />
+      <meta name='image' content={cover} />
+      {/* Schema.org tags */}
+      <script type='application/ld+json'>
+        {JSON.stringify(schemaOrgJSONLD)}
+      </script>
+      {/* OpenGraph tags */}
+      <meta property='og:url' content={postURL} />
+      <meta property='og:type' content='article' />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={meta_desc} />
+      <meta property='og:image' content={image} />
+      <meta
+        property='fb:app_id'
+        content={config.siteFBAppID ? config.siteFBAppID : ''}
+      />
+      {/* Twitter Card tags */}
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta
+        name='twitter:creator'
+        content={config.userTwitter ? config.userTwitter : ''}
+      />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={meta_desc} />
+      <meta name='twitter:image' content={image} />
+    </Helmet>
+  )
 }
 
-export default SEO
+export default SE0

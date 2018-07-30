@@ -1,16 +1,23 @@
+/**
+ * Created by vaibhav on 31/3/18
+ */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
+import './styles.sass'
+import config from '../../meta/config'
 
-import Navbar from '../components/Navbar'
-import './all.sass'
-import './responsLoudspeaker.css'
-
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({children}) => (
   <div>
-    <Helmet title="Respons Loudspeakers" />
-    <Navbar />
+    <Helmet>
+      <title>{config.siteTitle}</title>
+      <meta name='description' content={config.siteDescription} />
+    </Helmet>
+    <NavBar />
     <div>{children()}</div>
+    <Footer />
   </div>
 )
 
