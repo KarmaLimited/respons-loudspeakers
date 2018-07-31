@@ -132,11 +132,11 @@ const SkillSection = props => {
 
   return (
     <SectionContainer id="skill" colorNumber="2" skew>
-      <SectionHeader text="skill" colorNumber="2" />
+      <SectionHeader text="Tests" colorNumber="2" />
       <div css={styles.grid}>
         <WhiteBox css={styles.whiteBox}>
           <div css={styles.containerKihon}>
-            <h3>基本</h3>
+            <h3>first</h3>
             <div
               css={styles.helpButton}
               onClick={() => props.setCurrentModal('SKILL_HELP')}
@@ -160,7 +160,7 @@ const SkillSection = props => {
 
         <WhiteBox css={styles.whiteBox}>
           <div>
-            <h3>フロントエンド</h3>
+            <h3>second</h3>
             {Object.keys(skills['フロントエンド']).map(skill => (
               <Skill
                 skillName={skill}
@@ -173,7 +173,7 @@ const SkillSection = props => {
 
         <WhiteBox css={styles.whiteBox}>
           <div>
-            <h3>バックエンド</h3>
+            <h3>third</h3>
             {Object.keys(skills['バックエンド']).map(skill => (
               <Skill
                 skillName={skill}
@@ -186,7 +186,7 @@ const SkillSection = props => {
 
         <WhiteBox css={styles.whiteBox}>
           <div>
-            <h3>その他</h3>
+            <h3>fourth</h3>
             <ul>
               {skills['その他'].map(item => (
                 <li css={styles.sonotaListItem} key={item.title}>

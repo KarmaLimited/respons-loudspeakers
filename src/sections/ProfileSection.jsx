@@ -1,7 +1,7 @@
 import React from 'react';
 import AgeCalculator from '../components/AgeCalculator';
 import Hr from '../components/Hr';
-import IconExtLink from '../components/IconExtLink';
+// import IconExtLink from '../components/IconExtLink';
 import SectionContainer from '../components/SectionContainer';
 import SectionHeader from '../components/SectionHeader';
 import WhiteBox from '../components/WhiteBox';
@@ -60,29 +60,29 @@ const ProfileSection = () => {
 
   return (
     <SectionContainer id="profile" colorNumber="2" skew skewReverse>
-      <SectionHeader text="profile" colorNumber="2" />
+      <SectionHeader text="FAQ" colorNumber="2" />
 
       <div css={styles.container}>
         <WhiteBox css={styles.whiteBox}>
-          <h3 css={styles.h3}>About</h3>
+          <h3 css={styles.h3}>FAQ</h3>
           <div css={styles.summaryPictureContainer}>
             <img
               src={profileJpg}
               css={styles.summaryPicture}
-              alt="代表者のprofile写真"
+              alt="profile-logo"
             />
           </div>
 
           <div css={styles.summaryListItem}>
             <div css={styles.summaryItemName}>
-              <b>氏名</b>
+              <b>FAQ 1</b>
             </div>
-            <div css={styles.summaryItemContent}>田村 翔太</div>
+            <div css={styles.summaryItemContent}>Answer 1</div>
           </div>
 
           <div css={styles.summaryListItem}>
             <div css={styles.summaryItemName}>
-              <b>年齢</b>
+              <b>FAQ 2 (Been making speakers since)</b>
             </div>
             <div css={styles.summaryItemContent}>
               <AgeCalculator birthday="1985-03-15T15:00+09:00" />
@@ -91,110 +91,82 @@ const ProfileSection = () => {
 
           <div css={styles.summaryListItem}>
             <div css={styles.summaryItemName}>
-              <b>居住地</b>
+              <b>FAQ 3</b>
             </div>
-            <div css={styles.summaryItemContent}>島根県浜田市</div>
+            <div css={styles.summaryItemContent}>Answer 3</div>
           </div>
 
           <div css={styles.summaryListItem}>
             <div css={styles.summaryItemName}>
-              <b>趣味</b>
+              <b>FAQ 4</b>
             </div>
-            <div css={styles.summaryItemContent}>
-              <a
-                href="https://www.youtube.com/channel/UCbcCsHMZEjfsQZ5aaxNYNiw"
-                css={{ color: '#262626' }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                バンド活動<IconExtLink />
-              </a>
-              <br />
-              車の修理
-            </div>
+            <div css={styles.summaryItemContent}>Answer 4</div>
           </div>
 
           <div css={styles.summaryListItem}>
             <div css={styles.summaryItemName}>
-              <b>座右の銘</b>
+              <b>FAQ 5</b>
             </div>
-            <div css={styles.summaryItemContent}>全てがコードになる</div>
+            <div css={styles.summaryItemContent}>Answer 5</div>
           </div>
         </WhiteBox>
 
         <WhiteBox css={{ ...styles.whiteBox, ...styles.whiteBoxKeireki }}>
-          <h3 css={styles.h3}>経歴</h3>
+          <h3 css={styles.h3}>Intersting projects</h3>
 
           <Hr />
 
           <p>
-            <b>フリーランスエンジニア</b>
+            <b>job 1</b>
             <br />
             <span css={styles.keirekiGray}>(2018.4 - )</span>
           </p>
-          <p>
-            フリーランスエンジニアとして独立。Single Page
-            Applicationの開発を中心に受託を行う。
-            APIとフロントエンドが分離された美しく優しい世界を広めるべく、日々邁進中。
-          </p>
+          <p>some details</p>
 
           <Hr />
 
           <p>
-            <b>システム管理者</b>
+            <b>job 2</b>
             <br />
             <span css={styles.keirekiGray}>(2008.4 - 2018.3)</span>
           </p>
-          <p>
-            自治体のIT部門において主にインフラ管理を担当。
-            <a
-              href="https://www.nutanix.jp/company/customers/all-customers/hamada-city/"
-              target="_blank"
-              rel="noopener noreferrer"
-              css={styles.link}
-            >
-              Nutanixによるプライベートクラウド基盤の構築<IconExtLink />
-            </a>や、
-            <a
-              href="https://jpn.nec.com/case/city.hamada/index.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              css={styles.link}
-            >
-              SDNの導入<IconExtLink />
-            </a>などを手がける。
-          </p>
-          <p>
-            またプライベートにおいて、React、NodeJS、Docker、Kubernatesなどの技術を独学する。
-          </p>
+          <p>some details</p>
 
-          <Hr text="(様々な紆余曲折)" />
+          <Hr text="(Bonus thingy)" />
 
           <p>
-            <b>小学生</b>
+            <b>Bonus faq/job</b>
             <br />
             <span css={styles.keirekiGray}>(1993)</span>
           </p>
-          <p>
-            なぜか祖父の家に置いてあったMSXに触れ、プログラミングの面白さに目覚める。これを一生の仕事にすることを決意する。
-          </p>
+          <p>some details about that</p>
         </WhiteBox>
 
         <WhiteBox css={styles.whiteBox}>
-          <h3 css={styles.h3}>商号の由来</h3>
+          <h3 css={styles.h3}>Q & A / something else</h3>
           <p>
-            「ゆうに」という言葉は島根県の石見地方で使われている方言で、以下の二つの意味を持っています。
+            <b>paragraph 1:</b>
+            <br />
+            Aenean hendrerit sodales nulla eget pellentesque. Donec commodo
+            augue odio, non interdum justo facilisis ut. Curabitur tincidunt
+            imperdiet odio ut varius. Vivamus convallis egestas arcu, ac
+            bibendum nulla vehicula non.
           </p>
           <p>
-            <b>1．いとも簡単に・たやすく</b>
-            <br />例）ゆうにできらぁや<br />解）簡単にできますよ
+            <b>paragraph 2:</b>
+            <br />
+            Aenean hendrerit sodales nulla eget pellentesque. Donec commodo
+            augue odio, non interdum justo facilisis ut. Curabitur tincidunt
+            imperdiet odio ut varius. Vivamus convallis egestas arcu, ac
+            bibendum nulla vehicula non.
           </p>
           <p>
-            <b>2．ゆっくりと・ゆったりと</b>
-            <br />例）ゆうに食べちゃんさいね<br />解）ゆっくり召し上がってくださいね
-          </p>
-          <p>
-            responsloudspeakerという商号には、「問題をさらっと鮮やかに解決して、のんびりとした人生を送る」という意味を込めています。
+            <b>paragraph 3:</b>
+            <br />
+            Aenean hendrerit sodales nulla eget pellentesque. Donec commodo
+            augue odio, non interdum justo facilisis ut. Curabitur tincidunt
+            imperdiet odio ut varius. Vivamus convallis egestas arcu, ac
+            bibendum nulla vehicula non.
           </p>
         </WhiteBox>
       </div>

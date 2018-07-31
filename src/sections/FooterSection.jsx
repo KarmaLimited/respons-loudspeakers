@@ -14,7 +14,7 @@ const FooterSection = props => {
   const footerInfo = [
     {
       imgPath: svgForm,
-      description: 'contact',
+      description: 'Contact form',
       onClick: () => props.setCurrentModal('CONTACT'),
     },
     {
@@ -24,13 +24,13 @@ const FooterSection = props => {
     },
     {
       imgPath: svgFacebook,
-      description: 'facebook.com/respons',
-      link: 'https://www.facebook.com/repons/',
+      description: 'facebook',
+      link: 'https://www.facebook.com/',
     },
     {
       imgPath: svgGithub,
-      description: 'github.com/2lach',
-      link: 'https://github.com/2lach/',
+      description: 'Code',
+      link: 'https://github.com/2lach/gatsby-netlify-cms',
     },
     {
       imgPath: svgPhone,
@@ -39,7 +39,7 @@ const FooterSection = props => {
     },
     {
       imgPath: svgPin,
-      description: 'map',
+      description: 'Here are we',
       link: 'https://goo.gl/maps/V5G3DJSYy8u',
     },
   ];
@@ -72,12 +72,13 @@ const FooterSection = props => {
       marginBottom: 0,
       marginLeft: rhythm(1 / 2),
       width: '15rem',
+      textTransform: 'capitalize',
     },
   };
 
   return (
     <SectionContainer id="contact" colorNumber="2" skew skewFillBottom>
-      <SectionHeader text="contact-info" colorNumber="2" />
+      <SectionHeader text="Contact Us" colorNumber="2" />
 
       <div css={styles.container}>
         {footerInfo.map(info => (

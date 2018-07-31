@@ -30,7 +30,7 @@ const newsSection = () => {
 
   return (
     <SectionContainer id="news">
-      <SectionHeader text="news" colorNumber="1" />
+      <SectionHeader text="To Newspage" colorNumber="1" />
       <Link to="/news/" css={styles.link}>
         Respons loudspeaker news
       </Link>

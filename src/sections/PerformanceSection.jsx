@@ -5,17 +5,17 @@ import IconExtLink from '../components/IconExtLink';
 import SectionContainer from '../components/SectionContainer';
 import SectionHeader from '../components/SectionHeader';
 import WhiteBox from '../components/WhiteBox';
-import jissekiShisanPng from '../images/jisseki-shisan.png';
-import jissekiWarikanPng from '../images/jisseki-warikan.png';
-import jissekiYuuniJpg from '../images/jisseki-yuuni.jpg';
+import jissekiShisanPng from '../images/Rityta 1.png';
+import jissekiWarikanPng from '../images/Grand1.png';
+import jissekiYuuniJpg from '../images/grand-post-p2.png';
 import { rhythm } from '../utils/typography';
 
 const PerformanceSection = () => {
   const performances = [
     {
-      name: 'responsloudspeaker(このサイト)',
+      name: 'grand 1',
       description:
-        'Single Page Applicationとして作成した、事業広報用Webページです。',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper, velit et condimentum consequat, nibh tellus luctus lorem, at efficitur massa arcu sit amet quam.',
       techStack: [
         { name: 'React', description: 'UI' },
         { name: 'Gatsby', description: 'Static Site Generator' },
@@ -35,9 +35,9 @@ const PerformanceSection = () => {
       imgPath: jissekiYuuniJpg,
     },
     {
-      name: 'SplitBills',
+      name: 'grand 2',
       description:
-        '酔っぱらった状態で納得のいく割勘計算を行うための小道具です。',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper, velit et condimentum consequat, nibh tellus luctus lorem, at efficitur massa arcu sit amet quam.',
       techStack: [
         { name: 'Angular4', description: 'Front-end Framework' },
         { name: 'Netlify', description: 'ホスティング' },
@@ -51,9 +51,9 @@ const PerformanceSection = () => {
       imgPath: jissekiWarikanPng,
     },
     {
-      name: '資産運用支援ツール（作成中）',
+      name: 'grand 3',
       description:
-        '投資信託につきものである「リバランス」を楽に行うための支援ツールです。',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper, velit et condimentum consequat, nibh tellus luctus lorem, at efficitur massa arcu sit amet quam.',
       techStack: [
         { name: 'React', description: 'UI' },
         { name: 'Redux', description: 'State Container' },
@@ -117,7 +117,7 @@ const PerformanceSection = () => {
 
   return (
     <SectionContainer id="performance">
-      <SectionHeader text="performance" colorNumber="1" />
+      <SectionHeader text="Speakers" colorNumber="1" />
 
       {/* グリッド始点 */}
       <div css={styles.grid}>

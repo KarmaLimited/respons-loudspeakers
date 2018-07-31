@@ -4,10 +4,10 @@ import SEO from '../components/SEO';
 import '../css/global.css';
 import NewsSection from '../sections/NewsSection';
 import FooterSection from '../sections/FooterSection';
-import SummarySection from '../sections/SummarySection';
+import AboutSection from '../sections/AboutSection';
 import PerformanceSection from '../sections/PerformanceSection';
 import ProfileSection from '../sections/ProfileSection';
-import SkillSection from '../sections/SkillSection';
+import TestSection from '../sections/TestSection';
 import TopSection from '../sections/TopSection';
 
 class IndexPage extends React.Component {
@@ -38,8 +38,8 @@ class IndexPage extends React.Component {
         )}
 
         <TopSection />
-        <SummarySection setCurrentModal={this.setCurrentModal} />
-        <SkillSection setCurrentModal={this.setCurrentModal} />
+        <AboutSection setCurrentModal={this.setCurrentModal} />
+        <TestSection setCurrentModal={this.setCurrentModal} />
         <PerformanceSection />
         <ProfileSection />
         <NewsSection />

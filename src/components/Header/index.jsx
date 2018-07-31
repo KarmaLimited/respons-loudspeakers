@@ -188,12 +188,12 @@ class Header extends React.Component {
 
     const menuItem = [
       { name: 'About', id: 'summary', path: '/#summary' },
-      { name: 'Music', id: 'skill', path: '/#skill' },
-      { name: 'Philosophy', id: 'performance', path: '/#performance' },
-      { name: 'History', id: 'profile', path: '/#profile' },
+      { name: 'Tests', id: 'skill', path: '/#skill' },
+      { name: 'Speakers', id: 'performance', path: '/#performance' },
+      { name: 'FAQ', id: 'profile', path: '/#profile' },
       { name: 'Contact', id: 'contact', path: '/#contact' },
       { name: 'News', id: 'news', path: '/news/' },
-      { name: 'Respons Speakers', id: 'news', path: '/news/' },
+      /* { name: 'Respons Speakers', id: 'speakers', path: '/news/' }, */
     ];
 
     return (

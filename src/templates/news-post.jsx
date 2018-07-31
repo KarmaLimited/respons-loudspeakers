@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { DiscussionEmbed } from 'disqus-react';
 import Link from 'gatsby-link';
 import 'prismjs/themes/prism-tomorrow.css';
 import PropTypes from 'prop-types';
@@ -172,11 +171,11 @@ export default function newsPost(props) {
 
   const post = props.data.markdownRemark;
 
-  const disqusConfig = {
+  /* const disqusConfig = {
     url: `http://www.responsloudspeaker.com/news${post.fields.slug}`,
     identifier: `http://www.responsloudspeaker.com/news${post.fields.slug}`,
     title: post.frontmatter.title,
-  };
+  }; */
 
   return (
     <SectionContainer colorNumber="1" isTop>
@@ -189,7 +188,7 @@ export default function newsPost(props) {
       <div css={styles.container}>
         <Link to="/news/" css={styles.backButton}>
           <FontAwesomeIcon icon="arrow-left" style={styles.backButton.arrow} />{' '}
-          記事一覧に戻る
+          Back to Newspage
         </Link>
 
         <WhiteBox>
@@ -203,23 +202,12 @@ export default function newsPost(props) {
         </WhiteBox>
 
         <WhiteBox>
-          <aside css={styles.comments}>
-            <DiscussionEmbed
-              shortname="responsloudspeaker"
-              config={disqusConfig}
-            />
-          </aside>
-        </WhiteBox>
-
-        <WhiteBox>
           <footer css={styles.footer}>
             <img src={profileJpg} alt="profile" />
             <div>
               <p>田村 翔太</p>
               <p>
-                <Link to="/">responsloudspeaker</Link>{' '}
-                代表。島根県浜田市を拠点に主にフロントエンド開発のお手伝いをしているフリーランスエンジニアです。React/Reduxを用いたSingle
-                Page Applicationや、NodeJSを使ったAPI開発を得意としています。
+                <Link to="/">responsloudspeaker</Link> paragraph{' '}
               </p>
             </div>
           </footer>
@@ -227,7 +215,7 @@ export default function newsPost(props) {
 
         <Link to="/news/" css={styles.backButton}>
           <FontAwesomeIcon icon="arrow-left" style={styles.backButton.arrow} />{' '}
-          記事一覧に戻る
+          Back to Newspage
         </Link>
       </div>
 

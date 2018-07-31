@@ -9,27 +9,28 @@ import { rhythm } from '../utils/typography';
 const summarySection = props => {
   const articles = [
     [
-      'artiklar/test 1',
+      'History',
+      'Respons Loudspeakers founder Reidar Persson developed his passion for music when he started visiting Gothenburg Concert hall regularly in the 70s while he studied Chemistry In Gothenburg. This became such a frequent pleasure that he visited Gothenburg Concert hall up to two times a week and had a private seat there until 1980. He also enjoyed concerts frequently at: Snape Maltings Concert Hall - Aldeburgh, Royal Albert Hall-London, St. Johns Smith Square-London, Berwaldhallen-Stockholm, to name a few. During this period he also made recordings with an extremely modified Revox A77 tape recorder using different microphones. It was at this point that Reidar created a reference for true, natural sound and his knowledge of room acoustics.',
+    ],
+    [
+      'Philosophy',
+      `It's all about music
+      We design loudspeakers to satisfy our own hunger for the most realistic reproduced sound possible. If we can make a living out of it, that's just a bonus Our sound philosophy is to reproduce the warmth, body and excitement of a live music performance. A loudspeaker should only mirror the recorded sound from the recording microphone and neither add nor subtract any sounds.`,
+    ],
+    [
+      'Speakers',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
     ],
     [
-      'artiklar/test 2',
+      'Experience',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
     ],
     [
-      'artiklar/test 3',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
-    ],
-    [
-      'artiklar/test 4',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
-    ],
-    [
-      'artiklar/test 5',
+      'Extra paragraph 1',
       'Cras volutpat diam ac nibh fringilla, vitae facilisis diam sollicitudin. Pellentesque eleifend odio neque, nec finibus eros pellentesque id',
     ],
     [
-      'artiklar/test 6',
+      'Extra paragraph 2',
       'estibulum quam augue, feugiat a tortor in, efficitur rhoncus diam. Suspendisse id aliquam nulla. Nulla sapien sem, fermentum eget ultrices eu, pulvinar ac lacus. Etiam at leo elementum, blandit mauris id, mollis sem. Quisque maximus, nisi ut laoreet pharetra, ante libero scelerisque justo, at blandit nunc nulla vitae ante. Duis eu vulputate lorem. Integer quis malesuada mauris. Mauris eget lorem eros.',
     ],
   ];
