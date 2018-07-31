@@ -227,7 +227,7 @@ class Contact extends React.Component {
             </div>
 
             <label htmlFor="message">
-              おcontact内容：
+              contact respons loudspeaker：
               <textarea
                 name="message"
                 onChange={this.handleInputChange}

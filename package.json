@@ -1,8 +1,7 @@
 {
   "name": "respons-loudspeakers",
-  "description": "Respons loudspeakers site",
+  "description": "Respons Loudspeakers bootstraped with Gatsby",
   "version": "1.0.0",
-  "author": "2lach",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
     "@fortawesome/fontawesome-free-regular": "^5.0.10",
@@ -44,6 +43,8 @@
   },
   "license": "MIT",
   "scripts": {
+    "start": "npm run develop",
+    "serve": "gatsby serve",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "lint": "eslint --ext .js,.jsx .",

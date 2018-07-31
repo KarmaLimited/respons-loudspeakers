@@ -9,22 +9,29 @@ import { rhythm } from '../utils/typography';
 const summarySection = props => {
   const articles = [
     [
-      '何ができる？',
-      'SPA/PWA等の開発や、ServerlessなAPI開発を得意としています。',
+      'artiklar/test 1',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
     ],
     [
-      '契約形態は？',
-      '準委任契約による人的リソースの提供が可能です。内容によっては請負契約も可能です。',
+      'artiklar/test 2',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
     ],
     [
-      '常駐できる？',
-      '基本的にリモートワークを前提としておりますが、遠方での打ち合わせ等にも柔軟に対応いたします。',
+      'artiklar/test 3',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
     ],
     [
-      'いくらかかる？',
-      'ご相談ください。期間や内容に応じたお見書を作成いたします。',
+      'artiklar/test 4',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
     ],
-    ['いま仕事できる？', 'お仕事可能ですのでお気軽におcontactください。'],
+    [
+      'artiklar/test 5',
+      'Cras volutpat diam ac nibh fringilla, vitae facilisis diam sollicitudin. Pellentesque eleifend odio neque, nec finibus eros pellentesque id',
+    ],
+    [
+      'artiklar/test 6',
+      'estibulum quam augue, feugiat a tortor in, efficitur rhoncus diam. Suspendisse id aliquam nulla. Nulla sapien sem, fermentum eget ultrices eu, pulvinar ac lacus. Etiam at leo elementum, blandit mauris id, mollis sem. Quisque maximus, nisi ut laoreet pharetra, ante libero scelerisque justo, at blandit nunc nulla vitae ante. Duis eu vulputate lorem. Integer quis malesuada mauris. Mauris eget lorem eros.',
+    ],
   ];
 
   const styles = {
@@ -86,7 +93,7 @@ const summarySection = props => {
         css={styles.button}
         onClick={() => props.setCurrentModal('CONTACT')}
       >
-        おcontact
+        Contact
       </button>
     </SectionContainer>
   );

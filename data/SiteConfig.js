@@ -4,6 +4,6 @@ module.exports = {
   siteDescription: '',
   siteKeywords: 'SPA',
   siteUrl: 'https://respons-loudspeakers.netlify.com/',
-  siteLogo: '',
+  siteLogo: '../src/icons/logo.ico',
   // googleAnalyticsID: '',
 };

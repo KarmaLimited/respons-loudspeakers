@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link as LinkForScroll } from 'react-scroll';
-import IconExtLink from '../components/IconExtLink';
+// import IconExtLink from '../components/IconExtLink';
 import arrowSvg from '../icons/arrow.svg';
-import logoSvg from '../icons/logo.png';
+import logoSvg from '../icons/logo-white.svg';
 import topImageJpg from '../images/top-image.jpg';
 
 const TopSection = () => {
@@ -41,14 +41,15 @@ const TopSection = () => {
         <img src={logoSvg} alt="responsloudspeaker" />
       </h1>
       <div css={styles.description}>
-        <a
+        {/*   <a
           href="https://goo.gl/maps/HjyoY7NJ9j92"
           css={{ color: 'white' }}
           target="_blank"
           rel="noopener noreferrer"
-        >
+  >
           <IconExtLink color="#fff" />
-        </a>
+        </a> */}
+
         <br />
         <br />
       </div>
