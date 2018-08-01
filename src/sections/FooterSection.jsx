@@ -8,7 +8,9 @@ import svgGithub from '../icons/footer-github.svg';
 import svgMail from '../icons/footer-mail.svg';
 import svgPhone from '../icons/footer-phone.svg';
 import svgPin from '../icons/footer-pin.svg';
+// import svgLogo from '../icons/logo.svg';
 import { rhythm } from '../utils/typography';
+import siteConfig from '../../data/SiteConfig';
 
 const FooterSection = props => {
   const footerInfo = [
@@ -30,7 +32,7 @@ const FooterSection = props => {
     {
       imgPath: svgGithub,
       description: 'Code',
-      link: 'https://github.com/2lach/gatsby-netlify-cms',
+      link: 'https://github.com/2lach/respons-loudspeakers',
     },
     {
       imgPath: svgPhone,
@@ -96,6 +98,9 @@ const FooterSection = props => {
             </div>
           </a>
         ))}
+        <div className="copyright" css={styles.container}>
+          <p>{siteConfig.copyright}</p>
+        </div>
       </div>
     </SectionContainer>
   );

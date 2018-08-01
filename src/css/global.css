@@ -38,3 +38,10 @@
 h2{
   text-transform: capitalize;
 }
+.copyright{
+color:#fff;
+text-Transform: capitalize;
+position:absolute;
+bottom:-10vh;
+display:block;
+}
