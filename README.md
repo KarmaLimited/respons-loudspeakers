@@ -55,3 +55,5 @@ react-static intro to styled components:
 https://www.youtube.com/watch?v=KvlTVZPlmgs
 
 
+* when done remember to give cred to 'Shota Tamura' -> @junkboy0315 for awesome design and blueprint usage
+
