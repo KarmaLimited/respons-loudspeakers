@@ -76,10 +76,6 @@ class RipIe extends React.Component {
           <FontAwesomeIcon icon="times-circle" />
         </div>
 
-        <p>
-          当サイトはInternet
-          Explorerに対応したくありません。性能のよい、下記のようなブラウザを使ってみませんか。
-        </p>
         <ul css={{ float: 'left' }}>
           <li>
             -{' '}
@@ -89,7 +85,7 @@ class RipIe extends React.Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Chrome（オススメ）
+              Chrome
             </a>
           </li>
           <li>

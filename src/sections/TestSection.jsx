@@ -85,23 +85,23 @@ const SkillSection = props => {
     },
     その他: [
       {
-        title: 'skillテスト',
+        title: 'link 1',
         content: (
           <div>
-            Paizaコーディング{' '}
+            first{' '}
             <a
-              href="https://paiza.jp/guide/career#rank"
+              href="/"
               css={styles.link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Aランク<IconExtLink />
+              link<IconExtLink />
             </a>
           </div>
         ),
       },
       {
-        title: 'skill習得方法',
+        title: 'link 2 (Modal)',
         content: (
           <div
             onClick={() => props.setCurrentModal('UDEMY')}
@@ -111,21 +111,33 @@ const SkillSection = props => {
             role="button"
             tabIndex={0}
           >
-            Udemy（<span css={styles.link}>学習したコースの一覧</span>）
+            Modal（<span css={styles.link}>Click to open</span>）
           </div>
         ),
       },
       {
-        title: '言語',
+        title: 'Link 3',
         content: (
           <div>
-            日本語<br />英語（○読む書く聞く、×話す）
+            Here another <br /> lovely link
           </div>
         ),
       },
       {
-        title: '好きなツール',
-        content: 'VSCode、HHKB Pro2',
+        title: 'Link 4',
+        content: (
+          <div>
+            fourth{' '}
+            <a
+              href="/"
+              css={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              link<IconExtLink />
+            </a>
+          </div>
+        ),
       },
     ],
   };

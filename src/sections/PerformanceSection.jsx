@@ -5,10 +5,12 @@ import IconExtLink from '../components/IconExtLink';
 import SectionContainer from '../components/SectionContainer';
 import SectionHeader from '../components/SectionHeader';
 import WhiteBox from '../components/WhiteBox';
-import jissekiShisanPng from '../images/Rityta 1.png';
-import jissekiWarikanPng from '../images/Grand1.png';
-import jissekiYuuniJpg from '../images/grand-post-p2.png';
+import speakerImage1 from '../images/Rityta 1.png';
+import speakerImage2 from '../images/Grand1.png';
+import speakerImage3 from '../images/grand-post-p2.png';
 import { rhythm } from '../utils/typography';
+
+let indexkeeper = 0;
 
 const PerformanceSection = () => {
   const performances = [
@@ -16,49 +18,95 @@ const PerformanceSection = () => {
       name: 'grand 1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper, velit et condimentum consequat, nibh tellus luctus lorem, at efficitur massa arcu sit amet quam.',
-      techStack: [
-        { name: 'React', description: 'UI' },
-        { name: 'Gatsby', description: 'Static Site Generator' },
+      speakerSpecs: [
         {
-          name: 'AWS API Gateway',
-          description: 'contactフォーム用バックエンド',
+          /* eslint-disable */
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
         },
-        { name: 'AWS Lambda', description: 'contactフォーム用バックエンド' },
-        { name: 'AWS SES', description: 'contactフォーム用バックエンド' },
-        { name: 'Netlify', description: 'ホスティング、CI/CD' },
-        { name: 'Netlify CMS', description: 'CMS' },
-        { name: 'Sentry', description: 'クライアントサイドのエラー収集' },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
       ],
       webpageURL: 'http://www.responsloudspeaker.com',
       githubURL: 'https://github.com/junkboy0315/yuuni-web',
       newsPath: '/news/2018-04-09-JAMStackなWebサイトの作成/',
-      imgPath: jissekiYuuniJpg,
+      imgPath: speakerImage3,
     },
     {
       name: 'grand 2',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper, velit et condimentum consequat, nibh tellus luctus lorem, at efficitur massa arcu sit amet quam.',
-      techStack: [
-        { name: 'Angular4', description: 'Front-end Framework' },
-        { name: 'Netlify', description: 'ホスティング' },
-        { name: 'Jasmine', description: 'Unit/E2E Test' },
-        { name: 'Protractor', description: 'E2E Test' },
-        { name: 'Semaphore', description: 'CI/CD' },
-        { name: 'Service Worker', description: 'オフライン対応' },
+      speakerSpecs: [
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
       ],
       webpageURL: 'http://split.responsloudspeaker.com',
       githubURL: 'https://github.com/junkboy0315/splitbills',
-      imgPath: jissekiWarikanPng,
+      imgPath: speakerImage2,
     },
     {
       name: 'grand 3',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper, velit et condimentum consequat, nibh tellus luctus lorem, at efficitur massa arcu sit amet quam.',
-      techStack: [
-        { name: 'React', description: 'UI' },
-        { name: 'Redux', description: 'State Container' },
+      speakerSpecs: [
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
+        {
+          name: `Componentname${indexkeeper++}`,
+          description: 'brand and useful for',
+        },
       ],
-      imgPath: jissekiShisanPng,
+      imgPath: speakerImage1,
     },
   ];
 
@@ -98,7 +146,7 @@ const PerformanceSection = () => {
         background: '#eee',
       },
     },
-    techStackGrid: {
+    speakerSpecsGrid: {
       borderTop: '1px dotted #999',
       display: 'grid',
       fontSize: '0.8rem',
@@ -118,8 +166,6 @@ const PerformanceSection = () => {
   return (
     <SectionContainer id="performance">
       <SectionHeader text="Speakers" colorNumber="1" />
-
-      {/* グリッド始点 */}
       <div css={styles.grid}>
         {performances.map(performance => (
           <WhiteBox key={performance.name} css={styles.whiteBox}>
@@ -154,7 +200,7 @@ const PerformanceSection = () => {
                 rel="noopener noreferrer"
                 css={styles.externalLink}
               >
-                ソースコード
+                text
               </a>
             ) : (
               <div style={{ color: 'transparent' }}>_</div>
@@ -166,12 +212,12 @@ const PerformanceSection = () => {
                 target="_blank"
                 css={styles.externalLink}
               >
-                関連news
+                News
               </Link>
             )}
 
-            <ul css={styles.techStackGrid}>
-              {performance.techStack.map(tech => (
+            <ul css={styles.speakerSpecsGrid}>
+              {performance.speakerSpecs.map(tech => (
                 <span data-for={tech.name} data-tip key={tech.name}>
                   {tech.name}
                   <ReactTooltip id={tech.name} effect="solid">
@@ -183,7 +229,6 @@ const PerformanceSection = () => {
           </WhiteBox>
         ))}
       </div>
-      {/* グリッド終点 */}
     </SectionContainer>
   );
 };

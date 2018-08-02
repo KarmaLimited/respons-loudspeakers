@@ -8,154 +8,156 @@ const propTypes = {
   setCurrentModal: PropTypes.func.isRequired,
 };
 
+let namenr = 0;
 const Udemy = props => {
   const learnedList = [
     {
-      junle: 'Adobe XD',
+      junle: 'title1',
       courses: [
         {
-          name: 'Web UI UX Design using Adobe XD',
+          /* eslint-disable */
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/ui-ux-web-design-using-adobe-xd',
         },
       ],
     },
     {
-      junle: 'Angular',
+      junle: 'title2',
       courses: [
         {
-          name: 'Build a Real Time web app in node.js , Angular.js, mongoDB ',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/realtime-meanstack/',
         },
         {
-          name: 'Angular 2 Jump Start With Typescript ',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/angular-2-jump-start-with-typescript/',
         },
         {
-          name: 'Learn and Understand AngularJS ',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/learn-angularjs/',
         },
       ],
     },
     {
-      junle: 'Git',
+      junle: 'title3',
       courses: [
         {
-          name: 'Git Complete: The definitive, step-by-step guide to Git ',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/git-complete/',
         },
       ],
     },
     {
-      junle: 'Javascript',
+      junle: 'title4',
       courses: [
         {
-          name: "ES6 Javascript: The Complete Developer's Guide ",
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/javascript-es6-tutorial/',
         },
         {
-          name: 'JavaScript - Understanding the Weird Parts',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/understand-javascript/',
         },
         {
-          name: 'Learning Data Structures in JavaScript from Scratch',
+          name: `name${namenr++}`,
           url:
             'https://www.udemy.com/learning-data-structures-in-javascript-from-scratch/',
         },
         {
-          name: 'Projects In JavaScript & Jquery',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/projects-in-javascript-jquery/',
         },
       ],
     },
     {
-      junle: 'MongoDB',
+      junle: 'title5',
       courses: [
         {
-          name: 'The Complete Developers Guide to MongoDB ',
+          name: `name${namenr++}`,
           url:
             'https://www.udemy.com/the-complete-developers-guide-to-mongodb/',
         },
       ],
     },
     {
-      junle: 'MySQL',
+      junle: 'title6',
       courses: [
         {
-          name: 'MySQL Database For Beginners ',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/draft/12802/',
         },
       ],
     },
     {
-      junle: 'NodeJS',
+      junle: 'title7',
       courses: [
         {
-          name: 'Learn and Understand NodeJS ',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/understand-nodejs/',
         },
       ],
     },
     {
-      junle: 'PHP',
+      junle: 'title8',
       courses: [
         {
-          name: 'Projects in PHP and MySQL',
+          name: `name${namenr++}`,
           url:
             'https://www.udemy.com/the-complete-web-development-course-learn-by-building-apps/',
         },
       ],
     },
     {
-      junle: 'PWA',
+      junle: 'title9',
       courses: [
         {
-          name: 'Progressive Web Apps (PWA) - The Complete Guide',
+          name: `name${namenr++}`,
           url:
             'https://www.udemy.com/progressive-web-app-pwa-the-complete-guide/',
         },
       ],
     },
     {
-      junle: 'React / Redux',
+      junle: 'title10',
       courses: [
         {
-          name: 'Advanced React and Redux',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/react-redux-tutorial/',
         },
         {
-          name: 'Modern React with Redux',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/react-redux/',
         },
         {
-          name: 'Build Web Apps with React JS and Flux ',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/learn-and-understand-reactjs/',
         },
       ],
     },
     {
-      junle: 'Serverless',
+      junle: 'title11',
       courses: [
         {
-          name: 'AWS Serverless APIs & Apps - A Complete Introduction',
+          name: `name${namenr++}`,
           url:
             'https://www.udemy.com/aws-serverless-a-complete-introduction/learn/v4/questions',
         },
       ],
     },
     {
-      junle: 'Typescript',
+      junle: 'title12',
       courses: [
         {
-          name: 'Introduction to TypeScript ',
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/typescript/',
         },
       ],
     },
     {
-      junle: 'Webpack',
+      junle: 'title13',
       courses: [
         {
-          name: "Webpack 2: The Complete Developer's Guide ",
+          name: `name${namenr++}`,
           url: 'https://www.udemy.com/webpack-2-the-complete-developers-guide/',
         },
       ],
