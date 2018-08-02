@@ -82,10 +82,10 @@ const ProfileSection = () => {
 
           <div css={styles.summaryListItem}>
             <div css={styles.summaryItemName}>
-              <b>FAQ 2 (Been making speakers since)</b>
+              <b>Making awesome sounds</b>
             </div>
             <div css={styles.summaryItemContent}>
-              <AgeCalculator birthday="1985-03-15T15:00+09:00" />
+              <AgeCalculator birthday="1980-01-01T00:00+01:00" />
             </div>
           </div>
 
