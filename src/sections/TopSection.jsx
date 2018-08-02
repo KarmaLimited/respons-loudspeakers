@@ -7,12 +7,12 @@ import topImageSmall from '../images/violinist.png';
 import topImageLarge from '../images/arindam-mahanta-217437-unsplash.jpg';
 
 const TopSection = () => {
-  const width =
-    document.documentElement.clientWidth || document.body.clientWidth;
 
+  const width = top.innerWidth;
   let coverImage;
   let logoSvg;
-
+  console.log('w', width)
+  
   if (width <= 420) {
     coverImage = topImageSmall;
     logoSvg = logoWhiteGrey;
