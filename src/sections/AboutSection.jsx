@@ -1,12 +1,12 @@
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
 import SectionContainer from '../components/SectionContainer';
 import SectionHeader from '../components/SectionHeader';
 import WhiteBox from '../components/WhiteBox';
 import { rhythm } from '../utils/typography';
 
-const summarySection = props => {
+const summarySection = () => {
   const articles = [
     [
       'History',
@@ -90,18 +90,18 @@ const summarySection = props => {
         ))}
       </WhiteBox>
 
-      <button
+      {/* <button
         css={styles.button}
         onClick={() => props.setCurrentModal('CONTACT')}
       >
         Contact
-      </button>
+      </button> */}
     </SectionContainer>
   );
 };
 
-summarySection.propTypes = {
+/* summarySection.propTypes = {
   setCurrentModal: PropTypes.func.isRequired,
-};
+}; */
 
 export default summarySection;

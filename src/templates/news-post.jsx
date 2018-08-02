@@ -5,7 +5,7 @@ import Link from 'gatsby-link';
 import 'prismjs/themes/prism-tomorrow.css';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 import SEO from '../components/SEO';
 import SectionContainer from '../components/SectionContainer';
 import SectionHeader from '../components/SectionHeader';
@@ -136,10 +136,11 @@ export default function newsPost(props) {
           margin: '0 auto 2rem',
           borderRadius: '50%',
         },
-        ' div p:first-child': {
+        ' div p': {
           fontWeight: 'bold',
           marginBottom: '1rem',
           textAlign: 'center',
+          textDecoration: 'none',
         },
         ' div p:last-child': {
           fontSize: '0.8rem',
@@ -201,17 +202,17 @@ export default function newsPost(props) {
           </article>
         </WhiteBox>
 
-        <WhiteBox>
-          <footer css={styles.footer}>
-            <img src={profileJpg} alt="profile" />
-            <div>
-              <p>田村 翔太</p>
-              <p>
-                <Link to="/">responsloudspeaker</Link> paragraph{' '}
-              </p>
-            </div>
-          </footer>
-        </WhiteBox>
+        <Link to="/">
+          <WhiteBox>
+            <footer css={styles.footer}>
+              <img src={profileJpg} alt="profile" />
+              <div>
+                <p>Newspage</p>
+                <p>Click here to go back</p>
+              </div>
+            </footer>
+          </WhiteBox>
+        </Link>
 
         <Link to="/news/" css={styles.backButton}>
           <FontAwesomeIcon icon="arrow-left" style={styles.backButton.arrow} />{' '}
@@ -221,7 +222,7 @@ export default function newsPost(props) {
 
       <SEO postNode={post} />
 
-      <Helmet
+      {/* <Helmet
         script={[
           {
             innerHTML: `
@@ -235,7 +236,7 @@ export default function newsPost(props) {
             `,
           },
         ]}
-      />
+      /> */}
     </SectionContainer>
   );
 }

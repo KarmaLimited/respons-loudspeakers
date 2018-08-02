@@ -32,7 +32,7 @@ const newsSection = () => {
     <SectionContainer id="news">
       <SectionHeader text="To Newspage" colorNumber="1" />
       <Link to="/news/" css={styles.link}>
-        Respons loudspeaker news
+        Respons Loudspeaker News
       </Link>
     </SectionContainer>
   );

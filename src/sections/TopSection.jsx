@@ -1,14 +1,32 @@
 import React from 'react';
 import { Link as LinkForScroll } from 'react-scroll';
 import arrowSvg from '../icons/arrow.svg';
-import logoSvg from '../icons/logo-grey-and-white.png';
-import topImageJpg from '../images/violinist.png';
+import logoWhite from '../icons/logo-white.svg';
+import logoWhiteGrey from '../icons/logo-grey-and-white.png';
+import topImageSmall from '../images/violinist.png';
+import topImageLarge from '../images/cover-large-1.jpg';
+
+const width =
+  window.innerWidth ||
+  document.documentElement.clientWidth ||
+  document.body.clientWidth;
+
+let coverImage;
+let logoSvg;
+
+if (width <= 420) {
+  coverImage = topImageSmall;
+  logoSvg = logoWhiteGrey;
+} else {
+  coverImage = topImageLarge;
+  logoSvg = logoWhite;
+}
 
 const TopSection = () => {
   const styles = {
     container: {
       alignItems: 'center',
-      background: `url("${topImageJpg}") no-repeat center center`,
+      background: `url("${coverImage}") no-repeat center center`,
       backgroundSize: 'cover',
       display: 'flex',
       flexDirection: 'column',
@@ -19,9 +37,6 @@ const TopSection = () => {
     logo: {
       width: '450px',
       maxWidth: '80%',
-      /* background: 'black',
-      opacity: '0.4',
-      borderRadius: '40%', */
     },
     description: {
       color: '#fff',
