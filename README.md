@@ -1,9 +1,8 @@
 respons loudspeaker site
 gatsby and netlify
 
-TODO's
-
-
+Tested imgbot @ 2147 2 aug.
+https://imgbot.net/winning?installation_id=270065&setup_action=install
 DOCS
 --------------------------------------------------------------------------------
 gatsby + netlify-docs
