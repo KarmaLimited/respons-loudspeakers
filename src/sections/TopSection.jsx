@@ -6,13 +6,17 @@ import logoWhiteGrey from '../icons/logo-grey-and-white.png';
 import topImageSmall from '../images/violinist.png';
 import topImageLarge from '../images/arindam-mahanta-217437-unsplash.jpg';
 
-const TopSection = () => {
+const width =
+  window.screen.width ||
+  /* document.width ||
+  document.body.clientWidth ||
+  document.documentElement.clientWidth || */
+  window.innerWidth;
 
-  const width = top.innerWidth;
+const TopSection = () => {
   let coverImage;
   let logoSvg;
-  console.log('w', width)
-  
+
   if (width <= 420) {
     coverImage = topImageSmall;
     logoSvg = logoWhiteGrey;
