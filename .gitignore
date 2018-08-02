@@ -3,3 +3,4 @@ node_modules
 yarn-error.log
 /public
 src/.DS_Store
+src/images/.DS_Store

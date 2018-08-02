@@ -3,12 +3,14 @@ import { Link as LinkForScroll } from 'react-scroll';
 import arrowSvg from '../icons/arrow.svg';
 import logoWhite from '../icons/logo-white.svg';
 import logoWhiteGrey from '../icons/logo-grey-and-white.png';
-import topImageSmall from '../images/violinist.png';
+import topImageSmall from '../images/optimized/violinist.png';
 import topImageLarge from '../images/arindam-mahanta-217437-unsplash.jpg';
+import placeHolderImage from '../images/optimized/placeholderImg.jpg';
 
 const TopSection = () => {
   let coverImage;
   let logoSvg;
+
   if (typeof window !== 'undefined') {
     const width = window.screen.width || window.innerWidth;
     if (width <= 420) {
@@ -19,7 +21,7 @@ const TopSection = () => {
       logoSvg = logoWhite;
     }
   } else {
-    coverImage = topImageLarge;
+    coverImage = placeHolderImage;
   }
   const styles = {
     container: {

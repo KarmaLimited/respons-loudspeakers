@@ -38,7 +38,7 @@ const TemplateWrapper = ({ children, location }) => {
       <RipIe />
       <Helmet>
         <html lang="en" />
-        <meta name="theme-color" content="#d33a2c" />
+        <meta name="theme-color" content="#3b3d40" />
         {/* polifyll to use react-onclickoutside on IE11 */}
         <script src="//cdnjs.cloudflare.com/ajax/libs/dom4/2.0.0/dom4.js" />
       </Helmet>
