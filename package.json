@@ -9,7 +9,6 @@
     "@fortawesome/react-fontawesome": "^0.0.20",
     "axios": "^0.18.0",
     "babel-eslint": "^8.2.3",
-    "disqus-react": "^1.0.5",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
