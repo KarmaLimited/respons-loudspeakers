@@ -75,16 +75,16 @@ export default function newsPost(props) {
     },
     backButton: {
       background: '#fff',
-      border: '2px solid #6292F1',
+      border: '2px solid rgba(56,59,64,0.54)',
       borderRadius: '7px',
       boxShadow:
         '0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)',
-      color: '#6292F1',
+      color: 'rgba(56,59,64,0.54)',
       display: 'inline-block',
       padding: '5px 1rem',
       textDecoration: 'none',
       ':hover': {
-        background: '#6292F1',
+        background: 'rgba(56,59,64,0.54)',
         color: '#fff',
         cursor: 'pointer',
       },

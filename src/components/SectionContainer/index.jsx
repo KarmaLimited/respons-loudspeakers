@@ -34,7 +34,7 @@ const SectionContainer = ({
 }) => {
   const colors = {
     1: '#F5F7FA',
-    2: '#6292f1',
+    2: 'rgba(56,59,64,0.54)',
   };
 
   const bgColor = colors[colorNumber];

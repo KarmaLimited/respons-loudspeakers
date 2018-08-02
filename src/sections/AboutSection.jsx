@@ -45,7 +45,7 @@ const summarySection = props => {
       padding: rhythm(1.5),
     },
     caret: {
-      color: '#6292F1',
+      color: 'rgba(56,59,64,0.54)',
       marginRight: rhythm(1 / 8),
     },
     title: {
@@ -55,11 +55,11 @@ const summarySection = props => {
     },
     button: {
       background: '#fff',
-      border: '5px solid #6292F1',
+      border: '5px solid rgba(56,59,64,0.54)',
       borderRadius: '7px',
       boxShadow:
         '0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12)',
-      color: '#6292F1',
+      color: 'rgba(56,59,64)',
       display: 'block',
       margin: '60px auto 0',
       maxWidth: '100%',
@@ -67,7 +67,7 @@ const summarySection = props => {
       padding: '15px 0',
       width: '300px',
       ':hover': {
-        background: '#6292F1',
+        background: 'rgba(56,59,64,0.54)',
         color: '#fff',
         cursor: 'pointer',
       },

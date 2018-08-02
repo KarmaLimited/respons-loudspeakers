@@ -8,7 +8,7 @@ const propTypes = {
 
 const Stars = ({ countOfStars }) => {
   const styles = {
-    star: { color: '#6292F1' },
+    star: { color: 'rgba(56,59,64)' },
     starTranslucent: { opacity: '0.3' },
   };
 

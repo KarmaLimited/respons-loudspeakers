@@ -91,7 +91,7 @@ class Header extends React.Component {
 
   render() {
     const settings = {
-      transitionSpeed: '0.15s',
+      transitionSpeed: '0.25s',
       barColor: 'rgba(0, 0, 15, 0.8)',
       opacityHide: 0.2,
     };
@@ -102,7 +102,7 @@ class Header extends React.Component {
 
     const styles = {
       navbar: {
-        background: shouldBeHide ? 'transparent' : settings.barColor,
+        background: shouldBeHide ? 'rgba(56,59,64,0.54)' : settings.barColor,
         display: 'flex',
         height: '50px',
         justifyContent: 'space-between',

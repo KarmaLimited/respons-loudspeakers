@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link as LinkForScroll } from 'react-scroll';
-// import IconExtLink from '../components/IconExtLink';
 import arrowSvg from '../icons/arrow.svg';
-import logoSvg from '../icons/logo-white.svg';
-import topImageJpg from '../images/top-image.jpg';
+import logoSvg from '../icons/logo-grey-and-white.png';
+import topImageJpg from '../images/violinist.png';
 
 const TopSection = () => {
   const styles = {
     container: {
       alignItems: 'center',
-      background: `#6292F1 url("${topImageJpg}") no-repeat center center`,
+      background: `url("${topImageJpg}") no-repeat center center`,
       backgroundSize: 'cover',
       display: 'flex',
       flexDirection: 'column',
@@ -20,6 +19,9 @@ const TopSection = () => {
     logo: {
       width: '450px',
       maxWidth: '80%',
+      /* background: 'black',
+      opacity: '0.4',
+      borderRadius: '40%', */
     },
     description: {
       color: '#fff',

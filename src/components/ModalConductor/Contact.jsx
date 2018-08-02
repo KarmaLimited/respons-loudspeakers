@@ -153,7 +153,7 @@ class Contact extends React.Component {
         width: '100%',
       },
       button: {
-        background: '#6292F1',
+        background: 'rgba(56,59,64,0.54)',
         border: 'none',
         borderRadius: '5px',
         color: 'white',

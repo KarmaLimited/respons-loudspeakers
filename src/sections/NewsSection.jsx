@@ -7,11 +7,11 @@ const newsSection = () => {
   const styles = {
     link: {
       background: '#fff',
-      border: '5px solid #6292F1',
+      border: '5px solid rgba(56,59,64,0.54)',
       borderRadius: '7px',
       boxShadow:
         '0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12)',
-      color: '#6292F1',
+      color: 'rgba(56,59,64,0.54)',
       display: 'block',
       margin: 'auto',
       maxWidth: '100%',
@@ -21,7 +21,7 @@ const newsSection = () => {
       textDecoration: 'none',
       width: '300px',
       ':hover': {
-        background: '#6292F1',
+        background: 'rgba(56,59,64,0.54)',
         color: '#fff',
         cursor: 'pointer',
       },
