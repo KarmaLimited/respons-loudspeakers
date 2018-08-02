@@ -6,8 +6,7 @@ import logoWhiteGrey from '../icons/logo-grey-and-white.png';
 import topImageSmall from '../images/violinist.png';
 import topImageLarge from '../images/arindam-mahanta-217437-unsplash.jpg';
 
-const windowGlobal = typeof window !== 'undefined' && window;
-const width = windowGlobal.screen.width || windowGlobal.innerWidth;
+const width = window.screen.width || window.innerWidth;
 
 const TopSection = () => {
   let coverImage;
