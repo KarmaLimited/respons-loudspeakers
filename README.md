@@ -3,6 +3,10 @@ gatsby and netlify
 
 Tested imgbot @ 2147 2 aug.
 https://imgbot.net/winning?installation_id=270065&setup_action=install
+
+frontend checklist
+https://github.com/thedaviddias/Front-End-Performance-Checklist
+
 DOCS
 --------------------------------------------------------------------------------
 gatsby + netlify-docs
