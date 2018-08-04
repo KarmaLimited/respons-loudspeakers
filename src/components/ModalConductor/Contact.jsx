@@ -18,13 +18,7 @@ class Contact extends React.Component {
     this.state = {
       name: '',
       mail: '',
-      message: `・御社名
-・ご担当者連絡先（電話・メール）
-・仕事内容
-・期間
-・予算
-・場所
-などご記入いただけますと幸いです。`,
+      message: 'write me a message here',
       isSending: false,
       isSent: false,
       resultMessage: '',
@@ -65,12 +59,11 @@ class Contact extends React.Component {
       .then(() => {
         this.setState({
           isSent: true,
-          resultMessage:
-            '送信を正常に完了しました。概ね2営業日以内にご連絡差し上げますので、いましばらくお待ちくださいませ。',
+          resultMessage: 'Message sent',
         });
       })
       .catch(err => {
-        window.alert('送信に失敗しました。');
+        window.alert('Message was not sent');
         this.setState({
           isSending: false,
         });
@@ -84,11 +77,7 @@ class Contact extends React.Component {
       return;
     }
 
-    if (
-      window.confirm(
-        '送信が完了していません。入力した内容が失われますがよろしいですか？',
-      )
-    ) {
+    if (window.confirm('Message was not sent...')) {
       this.props.setCurrentModal(null);
     }
   }
@@ -240,7 +229,7 @@ class Contact extends React.Component {
               {this.state.isSending ? (
                 <PulseLoader color="#fff" loading size={9} />
               ) : (
-                '送信'
+                'Send'
               )}
             </button>
           </div>
