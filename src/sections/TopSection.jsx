@@ -5,7 +5,6 @@ import logoWhite from '../icons/logo-white.svg';
 import logoWhiteGrey from '../icons/logo-grey-and-white.png';
 import topImageSmall from '../images/optimized/violinist.png';
 import topImageLarge from '../images/arindam-mahanta-217437-unsplash.jpg';
-import placeHolderImage from '../images/optimized/placeholderImg.png';
 
 const TopSection = () => {
   let coverImage;
@@ -20,9 +19,8 @@ const TopSection = () => {
       coverImage = topImageLarge;
       logoSvg = logoWhite;
     }
-  } else {
-    coverImage = placeHolderImage;
   }
+
   const styles = {
     container: {
       alignItems: 'center',
