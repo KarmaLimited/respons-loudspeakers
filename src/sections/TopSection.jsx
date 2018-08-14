@@ -3,20 +3,16 @@ import { Link as LinkForScroll } from 'react-scroll';
 import arrowSvg from '../icons/arrow.svg';
 import logoWhite from '../icons/logo-white.svg';
 import logoWhiteGrey from '../icons/logo-grey-and-white.png';
-import topImageSmall from '../images/optimized/violinist.png';
-import topImageLarge from '../images/arindam-mahanta-217437-unsplash.jpg';
+import '../css/global.css';
 
 const TopSection = () => {
-  let coverImage;
   let logoSvg;
 
   if (typeof window !== 'undefined') {
     const width = window.screen.width || window.innerWidth;
     if (width <= 420) {
-      coverImage = topImageSmall;
       logoSvg = logoWhiteGrey;
     } else {
-      coverImage = topImageLarge;
       logoSvg = logoWhite;
     }
   }
@@ -24,8 +20,6 @@ const TopSection = () => {
   const styles = {
     container: {
       alignItems: 'center',
-      background: `url("${coverImage}") no-repeat center center`,
-      backgroundSize: 'cover',
       display: 'flex',
       flexDirection: 'column',
       height: '100vh',
@@ -51,8 +45,8 @@ const TopSection = () => {
   };
 
   return (
-    <section id="top" css={styles.container}>
-      <h1 css={styles.logo}>
+    <section id="top" css={styles.container} className="topBackground">
+      <h1 css={styles.logo} className="logoContainer">
         <img src={logoSvg} alt="responsloudspeaker" />
       </h1>
       <div css={styles.description}>

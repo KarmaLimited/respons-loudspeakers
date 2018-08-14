@@ -10,28 +10,21 @@ const summarySection = () => {
   const articles = [
     [
       'History',
-      'Respons Loudspeakers founder Reidar Persson developed his passion for music when he started visiting Gothenburg Concert hall regularly in the 70s while he studied Chemistry In Gothenburg. This became such a frequent pleasure that he visited Gothenburg Concert hall up to two times a week and had a private seat there until 1980. He also enjoyed concerts frequently at: Snape Maltings Concert Hall - Aldeburgh, Royal Albert Hall-London, St. Johns Smith Square-London, Berwaldhallen-Stockholm, to name a few. During this period he also made recordings with an extremely modified Revox A77 tape recorder using different microphones. It was at this point that Reidar created a reference for true, natural sound and his knowledge of room acoustics.',
+      "The RESPONS LOUDSPEAKERS's founder Reidar Persson developed his passion for music when he started visiting Gothenburg Concert hall regularly in the 70's while he studied Chemistry In Gothenburg. This became such a frequent pleasure that he visited Gothenburg Concert hall up to two times a week and had a private seat there until 1980. He also enjoyed concerts frequently at: Snape Maltings Concert Hall - Aldeburgh, Royal Albert Hall-London, St. John's Smith Square-London, Berwaldhallen-Stockholm, to name a few. During this period he also made recordings with an extremely modified Revox A77 tape recorder using different microphones. It was at this point that Reidar created a reference for true, natural sound and his knowledge of room acoustics .",
     ],
     [
       'Philosophy',
       `It's all about music
-      We design loudspeakers to satisfy our own hunger for the most realistic reproduced sound possible. If we can make a living out of it, that's just a bonus Our sound philosophy is to reproduce the warmth, body and excitement of a live music performance. A loudspeaker should only mirror the recorded sound from the recording microphone and neither add nor subtract any sounds.`,
+      We design loudspeakers to satisfy our own hunger for the most realistic reproduced sound possible. If we can make a living out of it, that's just a bonus.`,
     ],
     [
-      'Speakers',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
+      'Sound Philosophy',
+      'Our sound philosophy is to reproduce the warmth, body and excitement of a live music performance. A loudspeaker should only mirror the recorded sound from the recording microphone and neither add nor subtract any sounds. All frequencies down to the bass have to be reproduced at the correct level. Loudspeakers today usually exaggerate the treble and midrange, which results in a false tonal balance and poor dynamics. At first this can sound impressive in the hi-fi store, but listening to this type of exaggerated midrange and treble will in the end result in listening fatigue. Without a correct bass reproduction, any type of loudspeaker will lack the warmth and body of natural sounds because something fundamental is missing. Every model we manufacture down to our 2- way designs, has to have the same natural character and bass response.',
     ],
     [
-      'Experience',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus tristique lacus mollis pretium. Nunc lacinia nunc eu nulla accumsan, a dignissim lacus elementum.',
-    ],
-    [
-      'Extra paragraph 1',
-      'Cras volutpat diam ac nibh fringilla, vitae facilisis diam sollicitudin. Pellentesque eleifend odio neque, nec finibus eros pellentesque id',
-    ],
-    [
-      'Extra paragraph 2',
-      'estibulum quam augue, feugiat a tortor in, efficitur rhoncus diam. Suspendisse id aliquam nulla. Nulla sapien sem, fermentum eget ultrices eu, pulvinar ac lacus. Etiam at leo elementum, blandit mauris id, mollis sem. Quisque maximus, nisi ut laoreet pharetra, ante libero scelerisque justo, at blandit nunc nulla vitae ante. Duis eu vulputate lorem. Integer quis malesuada mauris. Mauris eget lorem eros.',
+      'Design Philosophy',
+      `It takes many years of listening and testing to acquire the knowledge of how to get a perfect, naturally balanced sound from loudspeakers. The crossover design is without a doubt the hardest one to master. But perfection can't be achieved without the best sounding components. This is why we only use hand-built, point-to-point wired crossovers with 1% tolerance propylene capacitors, temperature stable resistors, custom internal wires and air cored inductors. 
+      The baffles on our loudspeakers are as small as possible and covered with an absorbing felt to minimize baffle reflections. The cabinets are made to be as quiet as possible because if the cabinet resonates it adds extra sound to the music. We only use speaker units with soft suspension, which are able to recreate every little detail from the recordings. This is not possible with a stiff suspension. We also have the ambition to offer upgrade options on older loudspeaker models as new developments are made - if it's physically possible.`,
     ],
   ];
 

@@ -46,3 +46,17 @@ bottom:-10vh;
 display:block;
 font-size:12px;
 }
+.topBackground{
+  background: url('../images/arindam-mahanta-217437-unsplash.jpg') no-repeat center center;
+  background-size: cover;
+}
+@media (min-width: 300px) and (max-width: 480px) {
+  .logoContainer{
+  background-color: rgba(211, 211, 211, 0.4);
+  border-radius: 20px;
+}
+  .topBackground{
+    background: url('../images/optimized/violinist.png') no-repeat center center;
+    background-size: cover;
+  }
+}
