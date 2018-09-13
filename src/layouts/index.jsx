@@ -10,7 +10,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import 'string.prototype.startswith';
 import Header from '../components/Header';
-import RipIe from '../components/RipIe';
+// import RipIe from '../components/RipIe';
 
 const propTypes = {
   children: PropTypes.func.isRequired,
@@ -35,7 +35,6 @@ const TemplateWrapper = ({ children, location }) => {
 
   return (
     <div css={style}>
-      <RipIe />
       <Helmet>
         <html lang="en" />
         <meta name="theme-color" content="#3b3d40" />

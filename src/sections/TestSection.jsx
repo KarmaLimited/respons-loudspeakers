@@ -1,4 +1,4 @@
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconExtLink from '../components/IconExtLink';
@@ -88,14 +88,15 @@ const SkillSection = props => {
         title: 'link 1',
         content: (
           <div>
-            first{' '}
+            first
             <a
               href="/"
               css={styles.link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              link<IconExtLink />
+              link
+              <IconExtLink />
             </a>
           </div>
         ),
@@ -111,7 +112,8 @@ const SkillSection = props => {
             role="button"
             tabIndex={0}
           >
-            Modal（<span css={styles.link}>Click to open</span>）
+            Modal
+            <span css={styles.link}>Click to open</span>
           </div>
         ),
       },
@@ -119,7 +121,9 @@ const SkillSection = props => {
         title: 'Link 3',
         content: (
           <div>
-            Here another <br /> lovely link
+            Here another
+            <br />
+            lovely link
           </div>
         ),
       },
@@ -127,14 +131,15 @@ const SkillSection = props => {
         title: 'Link 4',
         content: (
           <div>
-            fourth{' '}
+            fourth
             <a
               href="/"
               css={styles.link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              link<IconExtLink />
+              link
+              <IconExtLink />
             </a>
           </div>
         ),

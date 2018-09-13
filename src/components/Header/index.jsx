@@ -2,6 +2,7 @@ import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import React from 'react';
 import onClickOutside from 'react-onclickoutside';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link as LinkForScroll } from 'react-scroll';
 import humbergerSvg from '../../icons/humberger.svg';
 import logoSvg from '../../icons/logo-white.svg';
@@ -38,8 +39,9 @@ class Header extends React.Component {
 
   // open menu
   onHumbergerClick() {
+    const { isMenuOpen } = this.state;
     this.setState({
-      isMenuOpen: !this.state.isMenuOpen,
+      isMenuOpen: !isMenuOpen,
     });
   }
 
@@ -82,7 +84,8 @@ class Header extends React.Component {
   }
 
   handleClickOutside() {
-    if (this.state.isMenuOpen) {
+    const { isMenuOpen } = this.state;
+    if (isMenuOpen) {
       this.setState({
         isMenuOpen: false,
       });
@@ -95,9 +98,9 @@ class Header extends React.Component {
       barColor: 'rgba(0, 0, 15, 0.8)',
       opacityHide: 0.2,
     };
-
+    const { location } = this.props;
     const { isMenuOpen, isScrolled } = this.state;
-    const isRootPath = this.props.location.pathname === '/';
+    const isRootPath = location.pathname === '/';
     const shouldBeHide = isRootPath && !isMenuOpen && !isScrolled;
 
     const styles = {
@@ -185,10 +188,15 @@ class Header extends React.Component {
         },
       },
     };
-
+    // const icon = <FontAwesomeIcon icon="music" />;
     const menuItem = [
+      {
+        name: 'Home',
+        id: 'top',
+        path: '/#top',
+      },
       { name: 'About', id: 'summary', path: '/#summary' },
-      { name: 'Tests', id: 'skill', path: '/#skill' },
+      /* { name: 'Tests', id: 'skill', path: '/#skill' }, */
       { name: 'Speakers', id: 'performance', path: '/#performance' },
       { name: 'FAQ', id: 'profile', path: '/#profile' },
       { name: 'Contact', id: 'contact', path: '/#contact' },
@@ -234,8 +242,7 @@ class Header extends React.Component {
                 key={item.id}
                 css={styles.menuItems}
                 className={
-                  this.props.location.pathname.substr(0, item.path.length) ===
-                  item.path
+                  location.pathname.substr(0, item.path.length) === item.path
                     ? 'active'
                     : null
                 }

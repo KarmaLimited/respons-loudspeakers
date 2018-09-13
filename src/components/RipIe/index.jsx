@@ -1,4 +1,4 @@
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import ripIeSvg from '../../icons/rip-ie.svg';
 
@@ -30,7 +30,7 @@ class RipIe extends React.Component {
 
   render() {
     const transitionSpeed = '0.15s';
-
+    const { isVisible } = this.state;
     const styles = {
       container: {
         background: '#F8D7DA',
@@ -40,12 +40,12 @@ class RipIe extends React.Component {
         color: '#721C24',
         margin: '2rem',
         maxWidth: '400px',
-        opacity: this.state.isVisible ? 1 : 0, // for animation
+        opacity: isVisible ? 1 : 0, // for animation
         padding: '2rem',
         position: 'fixed',
         right: 0,
         transition: `visibility ${transitionSpeed} ease-out, opacity ${transitionSpeed} ease-out`, // for amimation
-        visibility: this.state.isVisible ? 'visible' : 'hidden', // for amimation
+        visibility: isVisible ? 'visible' : 'hidden', // for amimation
         zIndex: 300,
       },
       link: {
@@ -78,7 +78,7 @@ class RipIe extends React.Component {
 
         <ul css={{ float: 'left' }}>
           <li>
-            -{' '}
+            -
             <a
               href="https://www.google.co.jp/chrome/index.html"
               css={styles.link}
@@ -89,7 +89,7 @@ class RipIe extends React.Component {
             </a>
           </li>
           <li>
-            -{' '}
+            -
             <a
               href="https://www.mozilla.org/ja/firefox/"
               css={styles.link}
@@ -100,7 +100,7 @@ class RipIe extends React.Component {
             </a>
           </li>
           <li>
-            -{' '}
+            -
             <a
               href="https://www.apple.com/jp/safari/"
               css={styles.link}
@@ -111,7 +111,7 @@ class RipIe extends React.Component {
             </a>
           </li>
           <li>
-            -{' '}
+            -
             <a
               href="https://www.microsoft.com/ja-jp/windows/microsoft-edge"
               css={styles.link}

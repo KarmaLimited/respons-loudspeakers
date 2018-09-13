@@ -7,8 +7,9 @@ import FooterSection from '../sections/FooterSection';
 import AboutSection from '../sections/AboutSection';
 import PerformanceSection from '../sections/PerformanceSection';
 import ProfileSection from '../sections/ProfileSection';
-import TestSection from '../sections/TestSection';
+// import TestSection from '../sections/TestSection';
 import TopSection from '../sections/TopSection';
+import '@fortawesome/react-fontawesome';
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -28,18 +29,19 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const { currentModal } = this.state;
     return (
       <div>
-        {this.state.currentModal && (
+        {currentModal && (
           <ModalConductor
-            currentModal={this.state.currentModal}
+            currentModal={currentModal}
             setCurrentModal={this.setCurrentModal}
           />
         )}
 
         <TopSection />
         <AboutSection setCurrentModal={this.setCurrentModal} />
-        <TestSection setCurrentModal={this.setCurrentModal} />
+        {/* <TestSection setCurrentModal={this.setCurrentModal} /> */}
         <PerformanceSection />
         <ProfileSection />
         <NewsSection />
