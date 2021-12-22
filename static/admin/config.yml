@@ -2,22 +2,21 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
+# This line should *not* be indented
 publish_mode: editorial_workflow
-media_folder: "static/newsImages" # Media files will be stored in the repo under static/newsImages
-public_folder: "/newsImages" # The src attribute for uploaded media will begin with /newsImages
-display_url: https://respons-loudspeakers.netlify.com/
+
+# These lines should *not* be indented
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "news" # Used in routes, e.g., /admin/collections/news
-    label: "news" # Used in the UI
-    folder: "_posts/news" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "news"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Summary", name: "summary", widget: "string"} # Explanatory text of the article list and used as the body of RSS
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Modified Date", name: "dateModified", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "image", widget: "image"}
+      - { label: "Description", name: "description", widget: "string"}
