@@ -1,7 +1,7 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-
+baseURL = "www.example.com"
+languageCode = "en-us"
+title = "Hugo Hero Theme"
+themesDir = "../.."
 
 [module]
   [module.hugoVersion]
